@@ -17,6 +17,7 @@ body {
 
 .side {
     width: 10vw;
+    min-width: 1cm;
     float: left;
     margin: 1vw;
     margin-bottom: 0;
