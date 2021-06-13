@@ -8,6 +8,7 @@ body {
 }
 
 .static {
+    visibility: hidden;
     width: 95%;
     height: 100%;
     position: fixed;
@@ -41,12 +42,14 @@ body {
 }
 
 .side img {
+    visibility: visible;
     display: block;
     text-align: center;
     margin: auto;
 }
 
 nav {
+    visibility: visible;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -75,5 +78,7 @@ main {
 
 main a {
     text-decoration: none;
-    color: #db6ecf;
+    color: #ffaaa6;
 }
+main a:hover {color: #ffef5e;}
+main a:active {color: white;}

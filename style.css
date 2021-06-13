@@ -9,6 +9,7 @@ body {
 }
 
 .static {
+    visibility: hidden;
     width: 100%;
     position: fixed;
     top: 0;
@@ -22,30 +23,27 @@ body {
     margin-bottom: 0;
 }
 
-.o2c {
-    font-size: 45px;
-    font-weight: bolder
-}
-
 .bg {
-    display: block;
-    text-align: center;
-    margin: auto;
     height: calc(100vh - 10vw);
     width: 1px
 }
 
 .propic {
-    display: block;
-    text-align: center;
-    margin: auto;
     object-fit:cover;
     border-radius:50%;
     height: 10vw;
 }
 
+.side img {
+    visibility: visible;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
 nav {
     z-index: -1;
+    visibility: visible;
     position: absolute;
     width: 100%;
     height: 12vw;
@@ -56,21 +54,29 @@ nav {
 }
 
 nav a {
-    line-height: 12vw;
+    line-height: 6vw;
     float: left;
     text-decoration: none;
-    margin-left: 10px;
-    font-size: 2vw;
+    margin: 3vw 20px 3vw 5px;
+    font-size: 20px;
     color: white;
 }
+
+.o2c {
+    font-size: 45px;
+    font-weight: bolder
+}
+
 
 main {
     padding-top: 13vw;
     padding-left: 8vw;
 }
 
-main a {
+a {
     text-decoration: none;
-    color: #db6ecf;
+    color: #ffaaa6;
 }
+a:hover {color: #ffef5e;}
+a:active {color: white;}
 
