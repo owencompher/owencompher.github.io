@@ -72,3 +72,8 @@ main {
     padding-top: 27vw;
     padding-left: 20%;
 }
+
+main a {
+    text-decoration: none;
+    color: #db6ecf;
+}

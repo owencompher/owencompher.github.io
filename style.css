@@ -69,3 +69,8 @@ main {
     padding-left: 8vw;
 }
 
+main a {
+    text-decoration: none;
+    color: #db6ecf;
+}
+
