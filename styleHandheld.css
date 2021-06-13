@@ -26,7 +26,7 @@ body {
 }
 
 .o2c {
-    font-size: 45px;
+    font-size: 55px;
     font-weight: bolder
 }
 
@@ -67,6 +67,7 @@ nav a {
     float: left;
     text-decoration: none;
     margin-left: 5%;
+    font-size: 30px;
     color: white;
 }
 
