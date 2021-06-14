@@ -29,8 +29,6 @@ body {
 }
 
 .propic {
-    object-fit:cover;
-    border-radius:50%;
     height: 10vw;
 }
 
