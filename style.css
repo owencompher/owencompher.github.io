@@ -56,7 +56,8 @@ nav a {
     float: left;
     text-decoration: none;
     margin: 3vw 20px 3vw 5px;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
     color: white;
 }
 
