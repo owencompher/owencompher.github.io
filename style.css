@@ -1,8 +1,11 @@
 body {
-    background-color: #2f3136;
+    background-image: url("stars.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    #background-color: #111111;
     font-family: "JetBrains Mono", monospace;
     color: white;
-    max-width: 800px;
+    max-width: 1000px;
     alignment: center;
     margin: auto;
 }
@@ -12,7 +15,6 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
-    float: left;
 }
 
 .side {
@@ -39,6 +41,9 @@ body {
 }
 
 nav {
+    background-image: url("stars.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     z-index: -1;
     visibility: visible;
     position: absolute;
@@ -46,13 +51,15 @@ nav {
     height: 10vw;
     padding-left: 10vw;
     float: left;
-    background-color: #2f3136;
 }
 
 nav a {
     line-height: 6vw;
     float: left;
     text-decoration: none;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000;
     margin: 2vw 20px 2vw 5px;
     font-size: 25px;
     font-weight: bold;
@@ -69,6 +76,10 @@ main {
     padding-right: 6vw;
     padding-top: 10vw;
     padding-left: 6vw;
+}
+
+iframe {
+    padding-top: 5px;
 }
 
 a {

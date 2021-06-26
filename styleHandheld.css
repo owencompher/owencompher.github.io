@@ -1,6 +1,8 @@
 body {
+    background-image: url("stars.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
-    background-color: #2f3136;
     font-family: "JetBrains Mono", monospace;
     width: 100vw;
     height: 100vh;
@@ -57,7 +59,9 @@ nav {
     padding-top: 3%;
     padding-bottom: 2%;
     float: left;
-    background-color: #2f3136;
+    background-image: url("stars.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 nav a {
@@ -75,6 +79,10 @@ main {
     padding-top: 21vw;
     padding-left: 14%;
     padding-right: 10%;
+}
+
+iframe {
+    padding-top: 5px;
 }
 
 main a {
