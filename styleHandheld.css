@@ -2,7 +2,7 @@ body {
     background-image: url("stars.jpg");
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
+    position: fixed;
     font-family: "JetBrains Mono", monospace;
     width: 100vw;
     height: 100vh;
