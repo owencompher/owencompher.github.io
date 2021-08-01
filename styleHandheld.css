@@ -1,13 +1,14 @@
 body {
-    background-image: url("stars.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    position: fixed;
+    #background-image: url("stars.jpg");
+    #background-size: cover;
+    #background-attachment: fixed;
+    #position: fixed;
+    background-color: #2f3136;
     top: 0;
     left: 0;
     font-family: "JetBrains Mono", monospace;
     width: 100vw;
-    #height: 100vh;
+    height: 100vh;
     color: white;
 }
 
@@ -61,9 +62,10 @@ nav {
     padding-top: 3%;
     padding-bottom: 2%;
     float: left;
-    background-image: url("stars.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    #background-image: url("stars.jpg");
+    #background-size: cover;
+    #background-attachment: fixed;
+    background-color: #2f3136;
 }
 
 nav a {
