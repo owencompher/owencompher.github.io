@@ -35,21 +35,7 @@
             full of them.</p>
     </div>
     <br><br>
-    <script>
-        let coll;
-        for (coll of document.getElementsByClassName("collapsible")) {
-            coll.addEventListener("click", function() {
-                const content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    this.innerHTML = this.innerHTML.replace("-", "+")
-                    content.style.display = "none";
-                } else {
-                    this.innerHTML = this.innerHTML.replace("+", "-")
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <script src="../collapsible.js"></script>
 </main>
 </body>
 </html>
