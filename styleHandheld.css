@@ -103,9 +103,8 @@ button {
     border: none;
     text-decoration: none;
     text-align: left;
-    text-size-adjust: auto;
     font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     color: #ffaaa6;
 }
