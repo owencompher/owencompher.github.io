@@ -89,3 +89,19 @@ a {
 a:hover {color: #ffef5e;}
 a:active {color: white;}
 
+button {
+    width: 100%;
+    background: none;
+    border: none;
+    text-decoration: none;
+    text-align: left;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffaaa6;
+}
+button:hover {color: #ffef5e}
+
+.content {
+    padding-left: 11px;
+}
