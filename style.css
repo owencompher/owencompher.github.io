@@ -74,8 +74,9 @@ nav a {
 
 main {
     padding-right: 6vw;
-    padding-top: 10vw;
+    padding-top: 11vw;
     padding-left: 6vw;
+    font-size: 20px;
 }
 
 iframe {
@@ -97,11 +98,20 @@ button {
     text-align: left;
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
-    font-weight: bold;
     color: #ffaaa6;
 }
 button:hover {color: #ffef5e}
 
 .content {
-    padding-left: 11px;
+    padding-left: 22px;
+}
+
+input {
+    background: none;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    color: #ffef5e;
+    outline-style: none;
+    outline-color: white;
+    border: none;
 }

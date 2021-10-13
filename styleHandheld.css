@@ -111,5 +111,15 @@ button {
 button:hover {color: #ffef5e}
 
 .content {
-    padding-left: 11px;
+    padding-left: 40px;
+}
+
+input {
+    background: none;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 50px;
+    color: #ffef5e;
+    outline-style: none;
+    outline-color: white;
+    border: none;
 }
