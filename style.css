@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'JetBrains Mono', monospace;
+    src: url("https://owencompher.github.io/JetBrains Mono Regular Nerd Font Complete Mono.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono', monospace;
+    src: url("https://owencompher.github.io/JetBrains Mono Italic Nerd Font Complete Mono.ttf") format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     background-image: url("stars.jpg");
     background-size: cover;
