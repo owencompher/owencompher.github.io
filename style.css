@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: url("stars.jpg");
+    background-image: url("resources/stars.jpg");
     background-size: cover;
     background-attachment: fixed;
     #background-color: #111111;
@@ -55,7 +55,7 @@ body {
 }
 
 nav {
-    background-image: url("stars.jpg");
+    background-image: url("resources/stars.jpg");
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;

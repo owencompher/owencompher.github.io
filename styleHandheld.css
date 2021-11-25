@@ -1,5 +1,5 @@
 body {
-    #background-image: url("stars.jpg");
+    #background-image: url("resources/stars.jpg");
     #background-size: cover;
     #background-attachment: fixed;
     #position: fixed;
@@ -63,7 +63,7 @@ nav {
     padding-top: 3%;
     padding-bottom: 2%;
     float: left;
-    #background-image: url("stars.jpg");
+    #background-image: url("resources/stars.jpg");
     #background-size: cover;
     #background-attachment: fixed;
     background-color: #2f3136;
