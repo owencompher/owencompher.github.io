@@ -79,7 +79,7 @@
             local = i%3;
             if(local == 0)
             {
-                text = illionNames[illion] + text;
+                if(digit+digits[i+1]+digits[i+2] != 0) text = illionNames[illion] + text;
                 if(digits[i+1] == 1) {
                     text = teens[digit] + text;
                 } else {
@@ -143,7 +143,7 @@
               so trust me please
             */
             if(local == 0) {
-                text = exianNames[exian] + text;
+                if(digit+digits[i+1]+digits[i+2]+digits[i+3] != 0) text = exianNames[exian] + text;
                 if(digits[i+1] == 1) {
                     text = sixteenNames[digit] + text;
                 } else {
