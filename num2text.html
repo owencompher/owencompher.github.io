@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number to text</title>
+</head>
+<body>
+<p>this is a small project that converts numbers into their "spoken word" formats</p>
+<input id="number" placeholder="number" size="3">
+<button id="convert" style="width: auto; font-weight: normal">Go</button><br>
+<p id="output">is </p>
+<hr><br>
+<p>this one is for a <a href="https://www.seximal.net/" target="_blank">seximal</a> number (digits 0-5 only)</p>
+<input id="sexnumber" placeholder="seximal number" size="3">
+<button id="sexconvert" style="width: auto; font-weight: normal">Go</button><br>
+<p id="sexoutput">is </p>
+<script>
+    illionNames = [
+        "",
+        "thousand ",
+        "million ",
+        "billion ",
+        "trillion ",
+        "quadrillion ",
+        "quintillion ",
+        "sextillion ",
+        "septillion ",
+        "octillion ",
+        "nonillion",
+        "decillion"
+    ]
+    names = [
+        "",
+        "one ",
+        "two ",
+        "three ",
+        "four ",
+        "five ",
+        "six ",
+        "seven ",
+        "eight ",
+        "nine "
+    ]
+    teens = [
+        "ten ",
+        "eleven ",
+        "twelve ",
+        "thirteen ",
+        "fourteen ",
+        "fifteen ",
+        "sixteen ",
+        "seventeen ",
+        "eighteen ",
+        "nineteen "
+    ]
+    tensNames = [
+        "",
+        "ten ",
+        "twenty ",
+        "thirty ",
+        "fourty ",
+        "fifty ",
+        "sixty ",
+        "seventy ",
+        "eighty ",
+        "ninety "
+    ]
+    function numToText(number) {
+        text = "";
+        digits = [];
+        for(place=Math.floor(Math.log10(number)); place>=0; place--) {
+            digit = Math.floor(number / Math.pow(10, place))
+                - Math.floor(number / Math.pow(10, place+1)) * 10;
+            digits[place] = digit;
+        }
+        for(i=0; i<digits.length; i++) {
+            digit = digits[i];
+            illion = Math.floor(i/3);
+            local = i%3;
+            if(local == 0)
+            {
+                text = illionNames[illion] + text;
+                if(digits[i+1] == 1) {
+                    text = teens[digit] + text;
+                } else {
+                    text = names[digit] + text;
+                }
+            }
+            if(local == 1 && digit != 1)
+            {
+                text = tensNames[digit] + text;
+            }
+            if(local == 2 && digit != 0) text = names[digit] + "hundred " + text;
+        }
+        return(text);
+    }
+    exianNames = [
+        "",
+        "unexian ",
+        "biexian ",
+        "triexian ",
+        "quadexian ",
+        "pentexian ",
+        "unnilexian ",
+        "ununexian ",
+        "umbiexian ",
+        "untriexian ",
+        "unquadrexian ",
+        "umpentexian ",
+        "binilexian "
+    ]
+    sixteenNames = [
+        "six ",
+        "seven ",
+        "eight ",
+        "nine ",
+        "ten ",
+        "eleven "
+    ]
+    sexes = [
+        "",
+        "six ",
+        "dozen ",
+        "thirsy ",
+        "foursy ",
+        "fifsy "
+    ]
+    function seximalToNom(number) {
+        text = "";
+        digits = [];
+        for(place=Math.floor(Math.log10(number)); place>=0; place--) {
+            digit = Math.floor(number / Math.pow(10, place))
+                - Math.floor(number / Math.pow(10, place+1)) * 10;
+            digits[place] = digit;
+        }
+        for(i=0; i<digits.length; i++) {
+            digit = digits[i];
+            exian = Math.floor(i/4);
+            local = i%4;
+            /*
+              all of these if and else-ifs have a tone of logic which is hard to follow
+              but i promise that i did the truth-tables and tested all the cases
+              so trust me please
+            */
+            if(local == 0) {
+                text = exianNames[exian] + text;
+                if(digits[i+1] == 1) {
+                    text = sixteenNames[digit] + text;
+                } else {
+                    text = names[digit] + text;
+                }
+            }
+            else if(local == 1 && digit != 1) {
+                if(digit == 2 && digits[i-1] == 0) text = "twelve " + text;
+                else text = sexes[digit] + text;
+            }
+            else if(local == 2  && (digit != 0 || digits[i+1] != 0)) {
+                text = "nif " + text;
+                if(digits[i+1] == 1) {
+                    text = sixteenNames[digit] + text;
+                } else {
+                    text = names[digit] + text;
+                }
+            }
+            else if(local ==3 && digit != 1) {
+                if(digit == 2 && digits[i-1] == 0) text = "twelve " + text;
+                else text = sexes[digit] + text;
+            }
+        }
+        return text;
+    }
+    document.getElementById("convert").addEventListener("click", function() {
+        let number = document.getElementById("number").value;
+        document.getElementById("output").innerHTML = "is \" " + numToText(number) + "\"";
+    })
+    document.getElementById("sexconvert").addEventListener("click", function() {
+        let number = document.getElementById("sexnumber").value;
+        document.getElementById("sexoutput").innerHTML = "is \" " + seximalToNom(number) + "\" in seximal nomenclature";
+    })
+</script>
+</body>
+</html>
