@@ -9,7 +9,7 @@
     }
     .link:hover {color: #ffff8f}
     .link:active {color: #f0f0eb}</style>
-    <style id="link-color">.link {color: #545155}</style>
+    <style id="link-color">.link {color: #78e098}</style>
     <link rel="stylesheet" href="../style.css" media="screen and (min-device-width: 481px)">
     <link rel="stylesheet" href="../styleHandheld.css" media="screen and (max-device-width: 480px)">
     <link rel="shortcut icon" type="image/jpg" href="../resources/heart.png">
@@ -99,19 +99,6 @@
         <br><br><br><br><br><br>
         <button class="link" onclick="cycleColors()">cycle colors</button>
         <script src="../collapsible.js"></script>
-        <script>
-            function cycleColors() {
-                var index = document.cookie.indexOf("color");
-                if(index == -1) {
-                    document.cookie = `color=0; path=/; domain=owencompher.me`
-                    var index = document.cookie.indexOf("color");
-                }
-                if(parseInt(document.cookie.substr(index+6, 1))==4) document.cookie = `color=0; path=/; domain=owencompher.me`
-                else document.cookie = `color=${parseInt(document.cookie.substr(index+6, 1))+1}; path=/; domain=owencompher.me`
-                const color = document.cookie.substr(index+6, 1)
-                document.getElementById('link-color').innerHTML =
-                    `.link {color: ${colors[color]}}`
-            }</script>
     </main>
 </body>
 </html>
