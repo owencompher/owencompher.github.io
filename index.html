@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Owen Compher's Website</title>
-    <style type="text/css">* { padding: 0; margin: 0; }</style>
+    <style type="text/css">
+        * { padding: 0; margin: 0; }
+        .link {
+            text-decoration: none;
+        }
+        .link:hover {color: #ffff8f}
+        .link:active {color: #f0f0eb}
+    </style>
+    <style id="link-color">.link {color: #545155}</style>
     <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 481px)">
     <link rel="stylesheet" href="styleHandheld.css" media="screen and (max-device-width: 480px)">
     <link rel="shortcut icon" type="image/jpg" href="resources/heart.png">
+    <script src="../link-color.js"></script>
 </head>
 <body>
     <div class="static">
         <nav>
-            <a class="o2c" href="https://owencompher.github.io">O2C</a>
-            <!-- a href="https://owencompher.github.io/blog">Blog</a -->
-            <a href="https://owencompher.github.io/projects">Projects</a>
-            <a href="https://owencompher.github.io/other">Other</a>
+            <a class="o2c link" href="https://owencompher.github.io">O2C</a>
+            <a class="link" href="https://gallery.owencompher.me">Gallery</a>
+            <a class="link" href="https://owencompher.github.io/projects">Projects</a>
+            <a class="link" href="https://owencompher.github.io/other">Other</a>
         </nav>
         <div class="side">
             <img class="propic" src="resources/propic.png">
-            <img class="bg" src="resources/background.png" style="width: 1px">
+            <img class="bg" src="resources/background.png" style="width: 4px">
         </div>
     </div>
     <main>
         <p>Hi, welcome to my website! This serves almost as an extended profile,
         where you can find  info about me, links to other profiles,
-        as well as anything else I think might be cool to have public.</p>
+        as well as anything else I think might be cool to have online.</p>
         <br>
         <b>About Me:</b>
-            <p class="content">I am 18, and go by the name Owen.<br>
-            When I am not in school, I like to spend my time volunteering,
-            talking to friends, or working on some kind of project.
+            <p class="content">I am 18, and my name is Owen.<br>
+            I am a student (soon to be) attending FSU, majoring in cybersecurity.
             I have interests in computer science, programming, pixel art,
-            and game design. I hope to go to college to study computer science.</p>
+            and game design.</p>
         <br>
         <b>Links:</b><br>
-            <a href="https://twitter.com/owencompher" target="_blank" class="content">Twitter</a><br>
-            <a href="https://twitch.tv/o2c_" target="_blank" class="content">Twitch</a><br>
-            <a href="https://www.youtube.com/channel/UChbv9EYP9pyn-6Xi-64suWw" target="_blank" class="content">Youtube</a><br>
-            <a href="https://github.com/owencompher" target="_blank" class="content">Github</a><br>
-            <a href="https://open.spotify.com/user/xf0rtgu6pnq4ffy21l3k0xxre?si=f29d375885014e5f&nd=1" target="_blank" class="content">Spotify</a><br>
+            <a class="link content" href="https://twitter.com/owencompher" target="_blank">Twitter</a><br>
+            <a class="link content" href="https://twitch.tv/o2c_" target="_blank">Twitch</a><br>
+            <a class="link content" href="https://www.youtube.com/channel/UChbv9EYP9pyn-6Xi-64suWw" target="_blank">Youtube</a><br>
+            <a class="link content" href="https://github.com/owencompher" target="_blank">Github</a><br>
+            <a class="link content" href="https://open.spotify.com/user/xf0rtgu6pnq4ffy21l3k0xxre?si=f29d375885014e5f&nd=1" target="_blank">Spotify</a><br>
         <br>
         <b>How to Contact:</b>
-            <p class="content">Email: <a href="mailto:owencompher@outlook.com" target="_blank">owencompher@outlook.com</a><br>
+            <p class="content">Email: <a class="link" href="mailto:owencompher@outlook.com" target="_blank">owencompher@outlook.com</a><br>
             Add on Discord: username O2C#9358</p>
     </main>
 </body>

@@ -1,24 +1,15 @@
 @font-face {
-    font-family: 'JetBrains Mono', monospace;
-    src: url("https://owencompher.github.io/JetBrains Mono Regular Nerd Font Complete Mono.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'JetBrains Mono', monospace;
-    src: url("https://owencompher.github.io/JetBrains Mono Italic Nerd Font Complete Mono.ttf") format('truetype');
-    font-weight: normal;
-    font-style: italic;
+    font-family: "JetBrains Mono";
+    src: url("resources/JetBrains Mono Regular Nerd Font Complete Mono.ttf");
 }
 
 body {
-    background-image: url("resources/stars.jpg");
+    #background-image: url("resources/stars.jpg");
     background-size: cover;
     background-attachment: fixed;
-    #background-color: #111111;
-    font-family: "JetBrains Mono", monospace;
-    color: white;
+    background-color: #545155;
+    font-family: "JetBrains Mono";
+    color: #f0f0eb;
     max-width: 1000px;
     alignment: center;
     margin: auto;
@@ -27,8 +18,9 @@ body {
 .static {
     visibility: hidden;
     width: 100%;
+    max-width: 1000px;
     position: fixed;
-    top: 0;
+    top: 1vw;
 }
 
 .side {
@@ -40,7 +32,7 @@ body {
 
 .bg {
     height: calc(100vh - 8vw);
-    width: 1px
+    width: 4px
 }
 
 .propic {
@@ -55,29 +47,27 @@ body {
 }
 
 nav {
-    background-image: url("resources/stars.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #545155;
     z-index: -1;
     visibility: visible;
     position: absolute;
     width: 100%;
-    height: 10vw;
+    max-width: calc(1000px - 10vw);
+    height: 5vw;
     padding-left: 10vw;
+    margin-top: 2.5vw;
     float: left;
+    border: 4px solid #f0f0eb;
 }
 
 nav a {
-    line-height: 6vw;
+    line-height: 5vw;
     float: left;
     text-decoration: none;
-    text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000;
-    margin: 2vw 20px 2vw 5px;
+    margin: 0 20px 0 5px;
     font-size: 25px;
     font-weight: bold;
-    color: white;
+    color: #f0f0eb;
 }
 
 .o2c {
@@ -97,13 +87,6 @@ iframe {
     padding-top: 5px;
 }
 
-a {
-    text-decoration: none;
-    color: #ffaaa6;
-}
-a:hover {color: #ffef5e;}
-a:active {color: white;}
-
 button {
     width: 100%;
     background: none;
@@ -112,9 +95,7 @@ button {
     text-align: left;
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
-    color: #ffaaa6;
 }
-button:hover {color: #ffef5e}
 
 .content {
     padding-left: 22px;
@@ -124,7 +105,6 @@ input {
     background: none;
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
-    color: #ffef5e;
     outline-style: none;
     outline-color: white;
     border: none;

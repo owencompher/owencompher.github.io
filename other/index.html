@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Owen Compher's Other Things</title>
-    <style type="text/css">* { padding: 0; margin: 0; }</style>
+    <style type="text/css">* { padding: 0; margin: 0; }
+    .link {
+        text-decoration: none;
+    }
+    .link:hover {color: #ffff8f}
+    .link:active {color: #f0f0eb}</style>
+    <style id="link-color">.link {color: #545155}</style>
     <link rel="stylesheet" href="../style.css" media="screen and (min-device-width: 481px)">
     <link rel="stylesheet" href="../styleHandheld.css" media="screen and (max-device-width: 480px)">
     <link rel="shortcut icon" type="image/jpg" href="../resources/heart.png">
+    <script src="../link-color.js"></script>
+    <script src="../collapsible.js"></script>
 </head>
 <body>
     <div class="static">
         <nav>
-            <a class="o2c" href="https://owencompher.github.io">O2C</a>
-            <!-- a href="https://owencompher.github.io/blog">Blog</a -->
-            <a href="https://owencompher.github.io/projects">Projects</a>
-            <a href="https://owencompher.github.io/other">Other</a>
+            <a class="o2c link" href="https://owencompher.github.io">O2C</a>
+            <a class="link" href="https://gallery.owencompher.me">Gallery</a>
+            <a class="link" href="https://owencompher.github.io/projects">Projects</a>
+            <a class="link" href="https://owencompher.github.io/other">Other</a>
         </nav>
         <div class="side">
             <img class="propic" src="../resources/propic.png">
-            <img class="bg" src="../resources/background.png" style="width: 1px">
+            <img class="bg" src="../resources/background.png">
         </div>
     </div>
     <main>
         <b>Cool people:</b>
-            <p class="content">My amazing boyfriend <a href="https://ultrakindaluv.carrd.co/" target="_blank">Buck</a></p>
-        <br>
+            <p class="content">My amazing boyfriend <a class="link" href="https://ultrakindaluv.carrd.co/" target="_blank">Buck</a></p>
+            <a class="content link">jan Misali</a>
+        <br><br>
         <b>Cool songs:</b>
             <div class="content">
-                <button type="button" class="collapsible" style="font-weight: normal">+ Pretty Girl</button>
+                <button type="button" class="collapsible link" style="font-weight: normal">+ Pretty Girl</button>
                 <iframe src="https://open.spotify.com/embed/playlist/1bzdKHKlvZSb72KtaEQnY0?theme=0"
                         width="100%" height="230px" frameBorder="0" allowtransparency="true"
                         allow="encrypted-media" class="content" style="display: none"></iframe>
                 <br>
-                <button type="button" class="collapsible" style="font-weight: normal">+ Bussin</button>
+                <button type="button" class="collapsible link" style="font-weight: normal">+ Bussin</button>
                 <iframe src="https://open.spotify.com/embed/playlist/1IIc2qCWt333RdU6JI0vQT?theme=0"
                         width="100%" height="230px" frameBorder="0" allowtransparency="true"
                         allow="encrypted-media" class="content" style="display: none"></iframe>
                 <br>
-                <button type="button" class="collapsible" style="font-weight: normal">+ Mad All the Time</button>
+                <button type="button" class="collapsible link" style="font-weight: normal">+ Mad All the Time</button>
                 <iframe src="https://open.spotify.com/embed/playlist/2noqOrS4RLJjUIb9VnI2ed?theme=0"
                         width="100%" height="230px" frameBorder="0" allowtransparency="true"
                         allow="encrypted-media" class="content" style="display: none"></iframe>
@@ -55,10 +64,10 @@
         <div class="content">
             <input id="number" placeholder="number" size="8"><input id="base" placeholder="base" size="3"> to
             <input id="newBase" placeholder="base" size="3">
-            <button id="convert" style="width: auto; font-weight: normal">Go</button><br>
+            <button class="link" id="convert" style="width: auto; font-weight: normal">Go</button><br>
             <p id="output">= 0</p>
             <p style="font-size: 18px">This can convert numbers from one base (like 2 for binary, 10 for decimal,
-                or 6 for <a href="https://www.seximal.net/" target="_blank">seximal</a>) to any other. It supports
+                or 6 for <a class="link" href="https://www.seximal.net/" target="_blank">seximal</a>) to any other. It supports
             bases from 2 to 36, using 0-9 and A-Z for a total of 36 characters.</p>
             <script>
                 function changeBase(number, base, newBase) {
@@ -89,7 +98,6 @@
             </script>
         </div>
         <br><br><br><br><br><br>
-        <script src="../collapsible.js"></script>
     </main>
 </body>
 </html>

@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Owen Compher's Projects</title>
-    <style type="text/css">* { padding: 0; margin: 0; }</style>
+    <style type="text/css">* { padding: 0; margin: 0; }
+    .link {
+        text-decoration: none;
+    }
+    .link:hover {color: #ffff8f}
+    .link:active {color: #f0f0eb}</style></style>
+    <style id="link-color">.link {color: #545155}</style>
     <link rel="stylesheet" href="../style.css" media="screen and (min-device-width: 481px)">
     <link rel="stylesheet" href="../styleHandheld.css" media="screen and (max-device-width: 480px)">
     <link rel="shortcut icon" type="image/jpg" href="../resources/heart.png">
+    <script src="../link-color.js"></script>
 </head>
 <body>
     <div class="static">
         <nav>
             <a class="o2c" href="https://owencompher.github.io">O2C</a>
-            <!-- a href="https://owencompher.github.io/blog">Blog</a -->
-            <a href="https://owencompher.github.io/projects">Projects</a>
-            <a href="https://owencompher.github.io/other">Other</a>
+            <a class="link" href="https://gallery.owencompher.me">Gallery</a>
+            <a class="link" href="https://owencompher.github.io/projects">Projects</a>
+            <a class="link" href="https://owencompher.github.io/other">Other</a>
         </nav>
         <div class="side">
             <img class="propic" src="../resources/propic.png">
-            <img class="bg" src="../resources/background.png" style="width: 1px">
+            <img class="bg" src="../resources/background.png">
         </div>
     </div>
     <main>
-        <b>oBot | <a href="https://github.com/owencompher/oBot" target="_blank">repository</a></b>
+        <b>oBot | <a class="link" href="https://github.com/owencompher/oBot" target="_blank">repository</a></b>
             <p class="content">oBot is a simple discord bot that I made for use by myself and friends. It has a few simple
             call-and-response commands, as well as a configuration system and a useful text-to-speech function.
             </p>
         <br>
-        <b>Website | <a href="https://github.com/owencompher/owencompher.github.io" target="_blank">repository</a></b>
+        <b>Website | <a class="link" href="https://github.com/owencompher/owencompher.github.io" target="_blank">repository</a></b>
             <p class="content">The website that you are reading this on is hosted by GitHub pages. I wrote it from scratch
-            and designed it myself. Visit the <a href="https://owencompher.github.io">homepage</a> for more info about
+            and designed it myself. Visit the <a class="link" href="https://owencompher.github.io">homepage</a> for more info about
             the website itself.
             </p>
         <br>
-        <b>Pixel Art | <a href="https://gallery.owencompher.me/" target="_blank">gallery</a></b>
+        <b>Pixel Art | <a class="link" href="https://gallery.owencompher.me/" target="_blank">gallery</a></b>
             <p class="content">Occasionally I make pixel art. My gallery is a Tumblr blog with a custom theme and domain.</p>
         <br>
-        <b>Drum Kit Sim | <a href="https://www.lexaloffle.com/bbs/?tid=44055" target="_blank">PIC0-8 forum</a></b>
+        <b>Drum Kit Sim | <a class="link" href="https://www.lexaloffle.com/bbs/?tid=44055" target="_blank">PIC0-8 forum</a></b>
             <p class="content">A small project I made in the PICO-8 game console. Controls are Z and X for the cymbals and
             the arrow keys for the drums.
             </p>
         <br>
+        <b>Desatur8 | <a class="link" href="https://lospec.com/palette-list/desatur8" target="_blank">Lospec page</a></b>
+            <p class="content">A small color palette with simple, somewhat desaturated colors that I designed to make pixel
+            art with. Every color on this website is from the palette.</p>
     </main>
 </body>
 </html>
