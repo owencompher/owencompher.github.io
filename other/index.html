@@ -103,11 +103,11 @@
             function cycleColors() {
                 var index = document.cookie.indexOf("color");
                 if(index == -1) {
-                    document.cookie = `color=0; path=../`
+                    document.cookie = `color=0; path=/`
                     var index = document.cookie.indexOf("color");
                 }
-                if(parseInt(document.cookie.substr(index+6, 1))==4) document.cookie = `color=0; path=../`
-                else document.cookie = `color=${parseInt(document.cookie.substr(index+6, 1))+1}; path=../`
+                if(parseInt(document.cookie.substr(index+6, 1))==4) document.cookie = `color=0; path=/`
+                else document.cookie = `color=${parseInt(document.cookie.substr(index+6, 1))+1}; path=/`
                 const color = document.cookie.substr(index+6, 1)
                 document.getElementById('link-color').innerHTML =
                     `.link {color: ${colors[color]}}`

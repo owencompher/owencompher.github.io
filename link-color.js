@@ -6,7 +6,7 @@ const colors = [
     '#e8b382'
 ]
 if(document.cookie.indexOf("color")==-1){
-    document.cookie = `color=0; path="../"`
+    document.cookie = `color=0; path=/`
 }
 const color = document.cookie.substr(document.cookie.indexOf("color")+6, 1)
 document.getElementById('link-color').innerHTML =
