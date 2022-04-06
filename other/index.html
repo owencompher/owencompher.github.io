@@ -97,7 +97,21 @@
             </script>
         </div>
         <br><br><br><br><br><br>
+        <button class="link" onclick="cycleColors()">cycle colors</button>
         <script src="../collapsible.js"></script>
+        <script>
+            function cycleColors() {
+                var index = document.cookie.indexOf("color");
+                if(index == -1) {
+                    document.cookie = `color=0}`
+                    var index = document.cookie.indexOf("color");
+                }
+                if(parseInt(document.cookie.substr(index+6, 1))==4) document.cookie = `color=0`
+                else document.cookie = `color=${parseInt(document.cookie.substr(index+6, 1))+1}`
+                const color = document.cookie.substr(index+6, 1)
+                document.getElementById('link-color').innerHTML =
+                    `.link {color: ${colors[color]}}`
+            }</script>
     </main>
 </body>
 </html>

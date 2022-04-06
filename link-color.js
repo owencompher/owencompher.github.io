@@ -5,5 +5,9 @@ const colors = [
     '#d8828e',
     '#e8b382'
 ]
+if(document.cookie.indexOf("color")==-1){
+    document.cookie = `color=0; path="../"`
+}
+const color = document.cookie.substr(document.cookie.indexOf("color")+6, 1)
 document.getElementById('link-color').innerHTML =
-    `.link {color: ${colors[Math.floor(Math.random() * 5)]}}`
+    `.link {color: ${colors[color]}}`
