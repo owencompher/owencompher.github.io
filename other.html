@@ -29,11 +29,12 @@
         </div>
     </div>
     <main>
-        <b>Cool people:</b>
+        <b>Featured people:</b>
             <p class="content">My amazing boyfriend <a class="link" href="https://ultrakindaluv.carrd.co/" target="_blank">Buck</a></p>
-            <a class="content link">jan Misali</a>
+            <a class="content link" href="https://www.youtube.com/channel/UCJOh5FKisc0hUlEeWFBlD-w" target="_blank">jan Misali</a><br>
+            <a class="content link" href="https://vihart.com/" target="_blank">Vi Hart</a>
         <br><br>
-        <b>Cool songs:</b>
+        <b>Some playlists I've made:</b>
             <div class="content">
                 <button type="button" class="collapsible link" style="font-weight: normal">+ Pretty Girl</button>
                 <iframe src="https://open.spotify.com/embed/playlist/1bzdKHKlvZSb72KtaEQnY0?theme=0"
@@ -50,54 +51,25 @@
                         width="100%" height="230px" frameBorder="0" allowtransparency="true"
                         allow="encrypted-media" class="content" style="display: none"></iframe>
                 <br>
+                <button type="button" class="collapsible link" style="font-weight: normal">+ On Melancholy Hill</button>
+                <iframe src="https://open.spotify.com/embed/playlist/6wyDVbyfa8PE2ZPNhu9tbr?theme=0"
+                        width="100%" height="230px" frameBorder="0" allowtransparency="true"
+                        allow="encrypted-media" class="content" style="display: none"></iframe>
             </div>
         <br>
-        <b>Cool music videos:</b><br>
+        <b>My favorite animated music videos:</b><br>
             <iframe width="560" height="315" class="content"
                     src="https://www.youtube.com/embed/videoseries?list=PLGMKp32S50QLJXhAq38jTD0kMcKcQUP4_"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe><br>
         <br>
-        <b>Number Base Converter:</b>
-        <div class="content">
-            <input id="number" placeholder="number" size="8"><input id="base" placeholder="base" size="3"> to
-            <input id="newBase" placeholder="base" size="3">
-            <button class="link" id="convert" style="width: auto; font-weight: normal">Go</button><br>
-            <p id="output">= 0</p>
-            <p style="font-size: 18px">This can convert numbers from one base (like 2 for binary, 10 for decimal,
-                or 6 for <a class="link" href="https://www.seximal.net/" target="_blank">seximal</a>) to any other. It supports
-            bases from 2 to 36, using 0-9 and A-Z for a total of 36 characters.</p>
-            <script>
-                function changeBase(number, base, newBase) {
-                    let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                    for(let i=0;i<number.length;i++) {
-                        if(chars.indexOf(number.substr(i,1))>=base) return number + " is not valid base " + base;
-                    }
-                    var value = 0;
-                    for(let i=0; i<number.length; i++) {
-                        value += chars.indexOf(number.substr(-i-1, 1))*(Math.pow(base, i));
-                    }
-
-                    var output = "";
-                    const length = Math.floor(Math.log(value)/Math.log(newBase)+1);
-                    for(let i=length-1; i>=0; i--) {
-                        let place = Math.pow(newBase, i);
-                        output += chars.substr(Math.floor(value/place), 1);
-                        value -= place*Math.floor(value/place);
-                    }
-                    return "= " + output;
-                }
-                document.getElementById("convert").addEventListener("click", function() {
-                    let number = document.getElementById("number").value;
-                    let base = parseInt(document.getElementById("base").value);
-                    let newBase = parseInt(document.getElementById("newBase").value);
-                    document.getElementById("output").innerHTML = changeBase(number, base, newBase);
-                })
-            </script>
-        </div>
-        <br><br><br><br><br><br>
+        <b>Other other things</b><br>
+            <a class="content link" href="https://blinry.org/toki-pona-cheat-sheet/toki-pona-cheat-sheet.pdf"
+                target="_blank">toki pona</a><br>
+        <br><br><br>
         <button class="link" onclick="cycleColors()">cycle colors</button>
+        <br><br>
         <script src="collapsible.js"></script>
     </main>
 </body>
