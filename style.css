@@ -2,6 +2,16 @@
     font-family: "JetBrains Mono";
     src: url("resources/JetBrains Mono Regular Nerd Font Complete Mono.ttf");
 }
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("resources/Jetbrains Mono Italic Nerd Font Complete Mono.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("resources/Jetbrains Mono Bold Nerd Font Complete Mono.ttf");
+    font-weight: bold;
+}
 
 body {
     #background-image: url("resources/stars.jpg");
