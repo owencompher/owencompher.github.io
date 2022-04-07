@@ -14,6 +14,22 @@ if(!color) color = colors[0];
 document.getElementById('link-color').innerHTML =
     `.link {color: ${color}}`
 
+function spinWheel() {
+    const wheel = document.getElementById("wheel")
+    var index = document.cookie.indexOf("color");
+    if (index == -1) {
+        document.cookie = `color=0; path=/; domain=owencompher.me`
+        var index = document.cookie.indexOf("color");
+    }
+    if (parseInt(document.cookie.substr(index + 6, 1)) == 4) document.cookie = `color=0; path=/; domain=owencompher.me`
+    else document.cookie = `color=${parseInt(document.cookie.substr(index + 6, 1)) + 1}; path=/; domain=owencompher.me`
+    let colori = document.cookie.substr(index + 6, 1)
+    if (!colori && parseInt(wheel.src.substr(16,1))<=4) colori = parseInt(wheel.src.substr(16,1))+1
+    else if (!colori) colori = 0
+    document.getElementById("wheel").src = `resources/wheel/${colori}.png`
+    cycleColors()
+}
+
 function cycleColors() {
     var index = document.cookie.indexOf("color");
     if (index == -1) {
