@@ -15,14 +15,9 @@ document.getElementById('link-color').innerHTML =
     `.link {color: ${color}}`
 
 function spinWheel() {
+    cycleColors()
     const wheel = document.getElementById("wheel")
     var index = document.cookie.indexOf("color");
-    if (index == -1) {
-        document.cookie = `color=0; path=/; domain=owencompher.me`
-        var index = document.cookie.indexOf("color");
-    }
-    if (parseInt(document.cookie.substr(index + 6, 1)) == 4) document.cookie = `color=0; path=/; domain=owencompher.me`
-    else document.cookie = `color=${parseInt(document.cookie.substr(index + 6, 1)) + 1}; path=/; domain=owencompher.me`
     let colori = document.cookie.substr(index + 6, 1)
     if (!colori && parseInt(wheel.src.substr(16,1))<=4) colori = parseInt(wheel.src.substr(16,1))+1
     else if (!colori) colori = 0
