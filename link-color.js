@@ -13,7 +13,7 @@ let color = colors[colori]
 if(!color) color = colors[0];
 document.getElementById('link-color').innerHTML =
     `.link {color: ${color}}`
-document.getElementById("wheel").src = `resources/wheel/${colori.toString()}.png`
+document.getElementById("wheel").src = `url(resources/wheel/${String(colori)}.png)`
 
 function spinWheel() {
     cycleColors()
@@ -22,7 +22,7 @@ function spinWheel() {
     let colori = document.cookie.substr(index + 6, 1)
     if (!colori && parseInt(wheel.src.substr(16,1))<=4) colori = parseInt(wheel.src.substr(16,1))+1
     else if (!colori) colori = 0
-    document.getElementById("wheel").src = `resources/wheel/${colori}.png`
+    document.getElementById("wheel").src = `url(resources/wheel/${String(colori)}.png)`
 }
 
 function cycleColors() {
