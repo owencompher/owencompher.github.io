@@ -13,7 +13,7 @@ let color = colors[colori]
 if(!color) color = colors[0];
 document.getElementById('link-color').innerHTML =
     `.link {color: ${color}}`
-document.getElementById("wheel").src = `resources/wheel/${parseInt(colori)}.png`
+document.getElementById("wheel").src = `resources/wheel/${colori.toString()}.png`
 
 function spinWheel() {
     cycleColors()
