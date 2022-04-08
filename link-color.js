@@ -9,6 +9,7 @@ if(document.cookie.indexOf("color")==-1){
     document.cookie = `color=0; path=/; domain=owencompher.me`
 }
 let colori = document.cookie.substr(document.cookie.indexOf("color")+6, 1)
+if(colori.length < 1) colori = 0;
 let color = colors[colori]
 if(!color) color = colors[0];
 document.getElementById('link-color').innerHTML =

@@ -24,12 +24,13 @@
             <a class="link" href="https://gallery.owencompher.me">Gallery</a>
             <a class="link" href="https://owencompher.me/projects.html">Projects</a>
             <a class="link" href="https://owencompher.me/other.html">Other</a>
-            <img id="wheel" src="resources/wheel/0.png"
-                 style="width: 3vw; margin-top: 1.25vw; margin-right: 2vw; float: right"
-                 onclick="spinWheel()">
-            <script>
-                document.getElementById("wheel").src = `resources/wheel/${colori}.png`
-            </script>
+            <div>
+                <span>Color</span>
+                <img id="wheel" src="resources/wheel/0.png" style="height: 3vw" onclick="spinWheel()">
+                <script>
+                    document.getElementById("wheel").src = `resources/wheel/${colori}.png`
+                </script>
+            </div>
         </nav>
         <div class="side">
             <img class="propic" src="resources/propic.png">

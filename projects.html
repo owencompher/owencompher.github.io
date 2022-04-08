@@ -22,6 +22,13 @@
             <a class="link" href="https://gallery.owencompher.me">Gallery</a>
             <a class="link" href="https://owencompher.me/projects.html">Projects</a>
             <a class="link" href="https://owencompher.me/other.html">Other</a>
+            <div>
+                <span>Color</span>
+                <img id="wheel" src="resources/wheel/0.png" style="height: 3vw" onclick="spinWheel()">
+                <script>
+                    document.getElementById("wheel").src = `resources/wheel/${colori}.png`
+                </script>
+            </div>
         </nav>
         <div class="side">
             <img class="propic" src="resources/propic.png">
@@ -55,6 +62,7 @@
         <b>Converters | <a class="link" href="https://owencompher.me/num2text.html" target="_blank">page</a></b>
         <p class="content">A collection of little javascript applets that I made for fun or practice. It currently has
             a base converter, a decimal to text converter, and a seximal to text converter.</p>
+        <br><br>
     </main>
 </body>
 </html>

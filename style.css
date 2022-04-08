@@ -80,6 +80,22 @@ nav a {
     color: #f0f0eb;
 }
 
+nav div {
+    float: right;
+    height: 100%;
+    padding-top: 1vw;
+    padding-right: 2vw
+}
+nav span {
+    vertical-align: top;
+    line-height: 3vw;
+    height: 3vw
+}
+
+nav img {
+
+}
+
 .o2c {
     font-size: 45px;
     font-weight: bolder
