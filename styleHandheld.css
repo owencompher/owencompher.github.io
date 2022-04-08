@@ -74,6 +74,21 @@ nav a {
     font-weight: bold;
 }
 
+nav div {
+    float: right;
+    height: 100%;
+    padding-top: 1vw;
+    padding-right: 2vw
+}
+
+nav span {
+    visibility: hidden;
+}
+
+nav img {
+    height: 9vw;
+}
+
 main {
     font-size: 30px;
     padding-top: 21vw;
@@ -92,7 +107,7 @@ button {
     text-decoration: none;
     text-align: left;
     font-family: "JetBrains Mono", monospace;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -103,7 +118,7 @@ button {
 input {
     background: none;
     font-family: "JetBrains Mono", monospace;
-    font-size: 50px;
+    font-size: 30px;
     outline-style: none;
     outline-color: white;
     border: none;
