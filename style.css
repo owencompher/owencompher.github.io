@@ -1,15 +1,15 @@
 @font-face {
     font-family: "JetBrains Mono";
-    src: url("resources/JetBrains Mono Regular Nerd Font Complete Mono.ttf");
+    src: url("resources/JBRegular.ttf");
 }
 @font-face {
     font-family: "JetBrains Mono";
-    src: url("resources/Jetbrains Mono Italic Nerd Font Complete Mono.ttf");
+    src: url("resources/JBItalic.ttf");
     font-style: italic;
 }
 @font-face {
     font-family: "JetBrains Mono";
-    src: url("resources/Jetbrains Mono Bold Nerd Font Complete Mono.ttf");
+    src: url("resources/JBBold.ttf");
     font-weight: bold;
 }
 
