@@ -14,6 +14,7 @@ let color = colors[colori]
 if(!color) color = colors[0];
 document.getElementById('link-color').innerHTML =
     `.link {color: ${color}}`
+document.querySelector("link[rel='shortcut icon']").setAttribute('href', `https://owencompher.me/resources/heart/${colori}.png`)
 
 function spinWheel() {
     cycleColors()
