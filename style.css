@@ -109,6 +109,10 @@ main {
     font-size: 20px;
 }
 
+.columns {display: table}
+.aboutColumn {width: 60%; float: left}
+.linkColumn {margin-left: 5%; float: left}
+
 iframe {
     padding-top: 5px;
 }
