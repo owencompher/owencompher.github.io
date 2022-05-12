@@ -41,6 +41,7 @@ body {
 }
 
 .bg {
+    background-color: #f0f0eb;
     height: calc(100vh - 8vw);
     width: 4px
 }
@@ -49,7 +50,7 @@ body {
     height: 8vw;
 }
 
-.side img {
+.side * {
     visibility: visible;
     display: block;
     text-align: center;
