@@ -53,11 +53,11 @@ nav {
     z-index: -1;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 81%;
     max-width: 95vw;
     height: 11vw;
     margin-left: 2%;
-    padding-left: 21%;
+    padding-left: 19%;
     margin-top: calc(3% + 2vw);
     margin-bottom: 2%;
     float: left;
@@ -78,7 +78,7 @@ nav div {
     float: right;
     height: 100%;
     padding-top: 1vw;
-    padding-right: 2vw
+    padding-right: 1vw
 }
 
 nav span {
