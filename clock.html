@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seximal Clock</title>
+    <style>
+        h1 { font-family: "JetBrains Mono", monospace }
+    </style>
+</head>
+<body>
+    <h1 id="sexNums">00:00:00</h1>
+    <h1 id="sexCode">000</h1>
+    <h1 id="sexWord">zero - zero and zero</h1>
+    <script>
+        function byId(elementId) {return document.getElementById(elementId)}
+        const cnv = [
+            0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15, 20, 21,
+            22, 23, 24, 25, 30, 31, 32, 33, 34, 35, 40,
+            41, 42, 43, 44, 45, 50, 51, 52, 53, 54, 55
+        ]
+        const digitDic = [
+            '0', '1', '2', '3', '4', '5',
+            '6', '7', '8', '9', 'A', 'B',
+            'C', 'D', 'E', 'F', 'G', 'H',
+            'I', 'J', 'K', 'L', 'M', 'N',
+            'O', 'P', 'Q', 'R', 'S', 'T',
+            'U', 'V', 'W', 'X', 'Y', 'Z']
+        names = [
+            " ",
+            "one ",
+            "two ",
+            "three ",
+            "four ",
+            "five ",
+            "six ",
+            "seven ",
+            "eight ",
+            "nine "
+        ]
+        exianNames = [
+            "",
+            "unexian ",
+            "biexian ",
+            "triexian ",
+            "quadexian ",
+            "pentexian ",
+            "unnilexian ",
+            "ununexian ",
+            "umbiexian ",
+            "untriexian ",
+            "unquadrexian ",
+            "umpentexian ",
+            "binilexian "
+        ]
+        sixteenNames = [
+            "six ",
+            "seven ",
+            "eight ",
+            "nine ",
+            "ten ",
+            "eleven "
+        ]
+        sexes = [
+            "",
+            "six ",
+            "dozen ",
+            "thirsy ",
+            "foursy ",
+            "fifsy "
+        ]
+        function seximalToNom(number) {
+            text = "";
+            digits = [];
+            for(place=Math.floor(Math.log10(number)); place>=0; place--) {
+                digit = Math.floor(number / Math.pow(10, place))
+                    - Math.floor(number / Math.pow(10, place+1)) * 10;
+                digits[place] = digit;
+            }
+            for(i=0; i<digits.length; i++) {
+                digit = digits[i];
+                exian = Math.floor(i/4);
+                local = i%4;
+                /*
+                  all of these if and else-ifs have a tone of logic which is hard to follow
+                  but i promise that i did the truth-tables and tested all the cases
+                  so trust me please
+                */
+                if(local == 0) {
+                    if(digit+digits[i+1]+digits[i+2]+digits[i+3] != 0) text = exianNames[exian] + text;
+                    if(digits[i+1] == 1) {
+                        text = sixteenNames[digit] + text;
+                    } else {
+                        text = names[digit] + text;
+                    }
+                }
+                else if(local == 1 && digit != 1) {
+                    if(digit == 2 && digits[i-1] == 0) text = "twelve " + text;
+                    else text = sexes[digit] + text;
+                }
+                else if(local == 2  && (digit != 0 || digits[i+1] != 0)) {
+                    text = "nif " + text;
+                    if(digits[i+1] == 1) {
+                        text = sixteenNames[digit] + text;
+                    } else {
+                        text = names[digit] + text;
+                    }
+                }
+                else if(local ==3 && digit != 1) {
+                    if(digit == 2 && digits[i-1] == 0) text = "twelve " + text;
+                    else text = sexes[digit] + text;
+                }
+            }
+            return text;
+        }
+        function sexTime(date) {
+            var secs = (date.getHours()*3600 + date.getMinutes()*60 + date.getSeconds())/(86400/46656)
+            return [parseInt(secs/1296)%36, parseInt(secs/36)%36, parseInt(secs)%36]
+        }
+
+        function updateClock() {
+            let st = sexTime(new Date())
+            byId('sexNums').innerHTML = cnv[st[0]] + ":" + (st[1]<6?"0":"") + cnv[st[1]] +
+                ":" + (st[2]<6?"0":"") + cnv[st[2]]
+            byId('sexCode').innerHTML = digitDic[st[0]] + digitDic[st[1]] + digitDic[st[2]]
+            byId('sexWord').innerHTML = seximalToNom(cnv[st[0]]) + "- " + seximalToNom(cnv[st[1]]) +
+                (st[2]>0?"and ":"") + seximalToNom(cnv[st[2]])
+            setTimeout(function () {updateClock()}, 1851)
+        }
+        updateClock()
+    </script>
+</body>
+</html>
