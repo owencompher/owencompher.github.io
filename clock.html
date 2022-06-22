@@ -8,6 +8,10 @@
     </style>
 </head>
 <body>
+    <select id="selection" onclick="updateClock()">
+        <option value="local">local</option>
+        <option value="UTC">UTC</option>
+    </select>
     <h1 id="sexNums">00:00:00</h1>
     <h1 id="sexCode">000</h1>
     <h1 id="sexWord">zero - zero and zero</h1>
@@ -113,14 +117,19 @@
             return text;
         }
         function sexTime(date) {
-            var secs = (date.getHours()*3600 + date.getMinutes()*60 + date.getSeconds())/(86400/46656)
+            var secs
+            if(byId('selection').value == "UTC") {
+                secs = (date.getUTCHours() * 3600 + date.getUTCMinutes() * 60 + date.getUTCSeconds()) / (86400 / 46656)
+            } else {
+                secs = (date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds()) / (86400 / 46656)
+            }
             return [parseInt(secs/1296)%36, parseInt(secs/36)%36, parseInt(secs)%36]
         }
 
         function updateClock() {
             let st = sexTime(new Date())
-            byId('sexNums').innerHTML = cnv[st[0]] + ":" + (st[1]<6?"0":"") + cnv[st[1]] +
-                ":" + (st[2]<6?"0":"") + cnv[st[2]]
+            byId('sexNums').innerHTML = cnv[st[0]] + (st[1]<6?"0":"") + cnv[st[1]] +
+                (st[2]<6?"0":"") + cnv[st[2]]
             byId('sexCode').innerHTML = digitDic[st[0]] + digitDic[st[1]] + digitDic[st[2]]
             byId('sexWord').innerHTML = seximalToNom(cnv[st[0]]) + "- " + seximalToNom(cnv[st[1]]) +
                 (st[2]>0?"and ":"") + seximalToNom(cnv[st[2]])
