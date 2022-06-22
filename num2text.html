@@ -16,7 +16,7 @@
 </head>
 <body>
 <br>
-<p>This can convert numbers from one base (like 2 for binary, 10 for decimal,
+<p>convert numbers from one base (like 2 for binary, 10 for decimal,
     or 6 for <a class="link" href="https://www.seximal.net/" target="_blank">seximal</a>) to any other. It supports
     bases from 2 to 36, using 0-9 and A-Z for a total of 36 characters.</p>
 <input id="basenumber" placeholder="number" size="8"><input id="base" placeholder="base" size="3"> to
@@ -24,7 +24,7 @@
 <button class="link" id="baseconvert" style="width: auto; font-weight: normal">Go</button><br>
 <p id="baseoutput">= 0</p>
 <hr><br>
-<p>this converts numbers into their "spoken word" formats</p>
+<p>convert numbers into their "spoken word" formats</p>
 <input id="number" placeholder="number" size="3" style="width: 200px">
 <button id="convert" class="link" style="width: auto; font-weight: normal">Go</button><br>
 <p id="output">is </p>
@@ -33,6 +33,13 @@
 <input id="sexnumber" placeholder="seximal number" size="3" style="width: 200px">
 <button id="sexconvert" class="link" style="width: auto; font-weight: normal">Go</button><br>
 <p id="sexoutput">is </p>
+<hr><br>
+<p>convert a normal (24hr) time into <a class="link" href="https://owencompher.me/clock.html" target="_blank">seximal time</a></p>
+<input id="hours" placeholder="hours" size="3" style="width: 60px">
+<input id="minutes" placeholder="minutes" size="3" style="width: 85px">
+<input id="seconds" placeholder="seconds" size="3" style="width: 100px">
+<button id="timeconvert" class="link" style="width: auto; font-weight: normal">Go</button><br>
+<p id="timeoutput">is </p>
 <script>
     illionNames = [
         "",
@@ -196,8 +203,6 @@
         let number = document.getElementById("sexnumber").value;
         document.getElementById("sexoutput").innerHTML = "is \" " + seximalToNom(number) + "\" in seximal nomenclature";
     })
-</script>
-<script>
     function changeBase(number, base, newBase) {
         let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for(let i=0;i<number.length;i++) {
@@ -215,13 +220,25 @@
             output += chars.substr(Math.floor(value/place), 1);
             value -= place*Math.floor(value/place);
         }
-        return "= " + output;
+        return number=='0'?'0':output;
     }
     document.getElementById("baseconvert").addEventListener("click", function() {
         let number = document.getElementById("basenumber").value;
         let base = parseInt(document.getElementById("base").value);
         let newBase = parseInt(document.getElementById("newBase").value);
-        document.getElementById("baseoutput").innerHTML = changeBase(number, base, newBase);
+        document.getElementById("baseoutput").innerHTML = "= " + changeBase(number, base, newBase);
+    })
+    function normToSexTime(hours, minutes, seconds) {
+        let secs = (hours * 3600 + minutes * 60 + seconds) / (86400 / 46656)
+        return "is " + (((secs/1296)%36==0)?'0':changeBase((parseInt(secs/1296)%36).toString(), 10, 6)) + ":" +
+            (((secs/36)%36==0)?'0':changeBase((parseInt(secs/36)%36).toString(), 10, 6)) + ":" +
+            (((secs)%36==0)?'0':changeBase((parseInt(secs)%36).toString(), 10, 6))
+    }
+    document.getElementById("timeconvert").addEventListener("click", function() {
+        let hours = isNaN(parseInt(document.getElementById("hours").value))?0:parseInt(document.getElementById("hours").value);
+        let minutes = isNaN(parseInt(document.getElementById("minutes").value))?0:parseInt(document.getElementById("minutes").value);
+        let seconds = isNaN(parseInt(document.getElementById("seconds").value))?0:parseInt(document.getElementById("seconds").value);
+        document.getElementById("timeoutput").innerHTML = normToSexTime(hours, minutes, seconds);
     })
 </script>
 </body>
