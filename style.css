@@ -33,6 +33,12 @@ body {
     top: 1vw;
 }
 
+.splash {
+    visibility: visible;
+    font-size: 15px;
+    margin: 0 0 1vw 0;
+}
+
 .side {
     width: 8vw;
     float: left;
