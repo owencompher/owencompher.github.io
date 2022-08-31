@@ -17,7 +17,7 @@ body {
     #background-image: url("resources/stars.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-color: #545155;
+    background-color: #333236;
     font-family: "JetBrains Mono";
     color: #f0f0eb;
     max-width: 1000px;
@@ -58,7 +58,7 @@ body {
 }
 
 nav {
-    background-color: #545155;
+    background-color: #333236;
     z-index: -1;
     visibility: visible;
     position: absolute;
