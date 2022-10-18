@@ -41,7 +41,9 @@ const splashes = [
     "\"lord of the gays\"",
     "\"yabadabadoooooo\"",
     "trapezoids banned on grounds of sex appeal",
-    "a"
+    "a",
+    "oh no, not again",
+    "don't panic"
 ]
 
 document.getElementById('splash').innerHTML = splashes[Math.floor(Math.random()*splashes.length)]
