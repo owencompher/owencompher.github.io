@@ -5,6 +5,7 @@
     <title>Seximal Clock</title>
     <style>
         h1 { font-family: "JetBrains Mono", monospace }
+        body { text-align: center}
     </style>
 </head>
 <body>
@@ -14,6 +15,85 @@
     </select>
     <h1 id="sexNums">00:00:00</h1>
     <h1 id="sexCode">000</h1>
+    <svg
+            height="120"
+            width="120"
+            style="transform: scaleY(-1)"
+    >
+        <circle
+                id="secs"
+                stroke="black"
+                stroke-width="12"
+                fill="transparent"
+                r="54"
+                cx="60"
+                cy="60"
+                stroke-dasharray="339 339"
+        />
+        <circle
+                stroke="black"
+                stroke-width="3"
+                fill="transparent"
+                r="54"
+                cx="60"
+                cy="60"
+        />
+        <circle
+                stroke="white"
+                stroke-width="13"
+                fill="transparent"
+                r="54"
+                cx="60"
+                cy="60"
+                stroke-dasharray="1 7.42 1 0"
+        />
+        <circle
+                id="mins"
+                stroke="black"
+                stroke-width="16"
+                fill="transparent"
+                r="38"
+                cx="60"
+                cy="60"
+                stroke-dasharray="0 238.8"
+        />
+        <circle
+                stroke="black"
+                stroke-width="4"
+                fill="transparent"
+                r="38"
+                cx="60"
+                cy="60"
+        />
+        <circle
+                stroke="white"
+                stroke-width="17"
+                fill="transparent"
+                r="38"
+                cx="60"
+                cy="60"
+                stroke-dasharray="0.9 4.83 0.9 0"
+        />
+        <circle
+                id="hours"
+                stroke="black"
+                stroke-width="12"
+                fill="transparent"
+                r="22"
+                cx="60"
+                cy="60"
+                stroke-dasharray="0 138.2"
+        />
+        <circle
+                stroke="white"
+                stroke-width="63"
+                fill="transparent"
+                r="28.64"
+                cx="60"
+                cy="60"
+                stroke-dasharray="1.2 27.6 1.2 0"
+        />
+    </svg>
     <h1 id="sexWord">zero - zero and zero</h1>
     <script>
         function byId(elementId) {return document.getElementById(elementId)}
@@ -133,6 +213,9 @@
             byId('sexCode').innerHTML = digitDic[st[0]] + digitDic[st[1]] + digitDic[st[2]]
             byId('sexWord').innerHTML = seximalToNom(cnv[st[0]]) + "- " + seximalToNom(cnv[st[1]]) +
                 (st[2]>0?"and ":"") + seximalToNom(cnv[st[2]])
+            byId('hours').style.strokeDasharray = `${(st[0]/36)*138.2} 138.2`
+            byId('mins').style.strokeDasharray = `${(st[1]/36)*238.8} 238.8`
+            byId('secs').style.strokeDasharray = `${(st[2]/36)*339} 339`
             setTimeout(function () {updateClock()}, 1851)
         }
         updateClock()
