@@ -116,6 +116,13 @@ main {
     font-size: 20px;
 }
 
+.project {width: 100%}
+.project * {display: inline-block; width: 20%;}
+.project .content {
+    display: block;
+    width: 100%;
+}
+
 .columns {display: table}
 .aboutColumn {width: 60%; float: left}
 .linkColumn {margin-left: 5%; float: left}
