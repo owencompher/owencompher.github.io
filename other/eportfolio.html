@@ -12,11 +12,11 @@
         .link:active {color: #f0f0eb}
     </style>
     <style id="link-color">.link {color: #545155}</style>
-    <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 481px)">
-    <link rel="stylesheet" href="styleHandheld.css" media="screen and (max-device-width: 480px)">
-    <link rel="shortcut icon" type="image/jpg" href="resources/heart/0.png">
-    <script src="link-color.js"></script>
-    <script src="dark-theme.js"></script>
+    <link rel="stylesheet" href="../style.css" media="screen and (min-device-width: 481px)">
+    <link rel="stylesheet" href="../styleHandheld.css" media="screen and (max-device-width: 480px)">
+    <link rel="shortcut icon" type="image/jpg" href="../resources/heart/0.png">
+    <script src="../scripts/link-color.js"></script>
+    <script src="../scripts/dark-theme.js"></script>
 </head>
 <body>
     <div class="static">
@@ -24,17 +24,17 @@
             <a class="o2c link" href="https://owencompher.me">O2C</a>
             <a class="link" href="https://gallery.owencompher.me">Gallery</a>
             <a class="link" href="https://owencompher.me/projects.html">Projects</a>
-            <a class="link" href="https://owencompher.me/other.html">Other</a>
+            <a class="link" href="https://owencompher.me/other">Other</a>
             <div>
                 <span>Color</span>
-                <img id="wheel" src="resources/wheel/0.png"height="3vw" onclick="spinWheel()">
+                <img id="wheel" src="../resources/wheel/0.png" height="3vw" onclick="spinWheel()">
                 <script>
                     document.getElementById("wheel").src = `resources/wheel/${colori}.png`
                 </script>
             </div>
         </nav>
         <div class="side">
-            <img class="propic" src="resources/propic.png">
+            <img class="propic" src="../resources/propic.png">
             <div class="bg"></div>
             <!--img class="bg" src="resources/background.png"-->
         </div>
@@ -69,7 +69,7 @@
         </div>
         <br>
         <p>please visit my <a class="link" href="https://owencompher.me" target="_blank">homepage</a></p>
-        <script src="collapsible.js"></script>
+        <script src="../scripts/collapsible.js"></script>
     </main>
 </body>
 </html>
