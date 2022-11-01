@@ -1,6 +1,8 @@
 name: Generate xml sitemap
 
-on: []
+on:
+  push:
+    branches: [main]
 
 jobs:
   sitemap_job:
