@@ -40,201 +40,23 @@
 <input id="seconds" placeholder="seconds" size="3" style="width: 100px">
 <button id="timeconvert" class="link" style="width: auto; font-weight: normal">Go</button><br>
 <p id="timeoutput">is </p>
+<script src="../scripts/convert.js"></script>
 <script>
-    illionNames = [
-        "",
-        "thousand ",
-        "million ",
-        "billion ",
-        "trillion ",
-        "quadrillion ",
-        "quintillion ",
-        "sextillion ",
-        "septillion ",
-        "octillion ",
-        "nonillion",
-        "decillion"
-    ]
-    names = [
-        "",
-        "one ",
-        "two ",
-        "three ",
-        "four ",
-        "five ",
-        "six ",
-        "seven ",
-        "eight ",
-        "nine "
-    ]
-    teens = [
-        "ten ",
-        "eleven ",
-        "twelve ",
-        "thirteen ",
-        "fourteen ",
-        "fifteen ",
-        "sixteen ",
-        "seventeen ",
-        "eighteen ",
-        "nineteen "
-    ]
-    tensNames = [
-        "",
-        "ten ",
-        "twenty ",
-        "thirty ",
-        "fourty ",
-        "fifty ",
-        "sixty ",
-        "seventy ",
-        "eighty ",
-        "ninety "
-    ]
-    function numToText(number) {
-        text = "";
-        digits = [];
-        for(place=Math.floor(Math.log10(number)); place>=0; place--) {
-            digit = Math.floor(number / Math.pow(10, place))
-                - Math.floor(number / Math.pow(10, place+1)) * 10;
-            digits[place] = digit;
-        }
-        for(i=0; i<digits.length; i++) {
-            digit = digits[i];
-            illion = Math.floor(i/3);
-            local = i%3;
-            if(local == 0)
-            {
-                if(digit+digits[i+1]+digits[i+2] != 0) text = illionNames[illion] + text;
-                if(digits[i+1] == 1) {
-                    text = teens[digit] + text;
-                } else {
-                    text = names[digit] + text;
-                }
-            }
-            if(local == 1 && digit != 1)
-            {
-                text = tensNames[digit] + text;
-            }
-            if(local == 2 && digit != 0) text = names[digit] + "hundred " + text;
-        }
-        return(text);
-    }
-    exianNames = [
-        "",
-        "unexian ",
-        "biexian ",
-        "triexian ",
-        "quadexian ",
-        "pentexian ",
-        "unnilexian ",
-        "ununexian ",
-        "umbiexian ",
-        "untriexian ",
-        "unquadrexian ",
-        "umpentexian ",
-        "binilexian "
-    ]
-    sixteenNames = [
-        "six ",
-        "seven ",
-        "eight ",
-        "nine ",
-        "ten ",
-        "eleven "
-    ]
-    sexes = [
-        "",
-        "six ",
-        "dozen ",
-        "thirsy ",
-        "foursy ",
-        "fifsy "
-    ]
-    function seximalToNom(number) {
-        text = "";
-        digits = [];
-        for(place=Math.floor(Math.log10(number)); place>=0; place--) {
-            digit = Math.floor(number / Math.pow(10, place))
-                - Math.floor(number / Math.pow(10, place+1)) * 10;
-            digits[place] = digit;
-        }
-        for(i=0; i<digits.length; i++) {
-            digit = digits[i];
-            exian = Math.floor(i/4);
-            local = i%4;
-            /*
-              all of these if and else-ifs have a tone of logic which is hard to follow
-              but i promise that i did the truth-tables and tested all the cases
-              so trust me please
-            */
-            if(local == 0) {
-                if(digit+digits[i+1]+digits[i+2]+digits[i+3] != 0) text = exianNames[exian] + text;
-                if(digits[i+1] == 1) {
-                    text = sixteenNames[digit] + text;
-                } else {
-                    text = names[digit] + text;
-                }
-            }
-            else if(local == 1 && digit != 1) {
-                if(digit == 2 && digits[i-1] == 0) text = "twelve " + text;
-                else text = sexes[digit] + text;
-            }
-            else if(local == 2  && (digit != 0 || digits[i+1] != 0)) {
-                text = "nif " + text;
-                if(digits[i+1] == 1) {
-                    text = sixteenNames[digit] + text;
-                } else {
-                    text = names[digit] + text;
-                }
-            }
-            else if(local ==3 && digit != 1) {
-                if(digit == 2 && digits[i-1] == 0) text = "twelve " + text;
-                else text = sexes[digit] + text;
-            }
-        }
-        return text;
-    }
-    document.getElementById("convert").addEventListener("click", function() {
+    byId("convert").addEventListener("click", function() {
         let number = document.getElementById("number").value;
         document.getElementById("output").innerHTML = "is \" " + numToText(number) + "\"";
     })
-    document.getElementById("sexconvert").addEventListener("click", function() {
+    byId("sexconvert").addEventListener("click", function() {
         let number = document.getElementById("sexnumber").value;
         document.getElementById("sexoutput").innerHTML = "is \" " + seximalToNom(number) + "\" in seximal nomenclature";
     })
-    function changeBase(number, base, newBase) {
-        let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        for(let i=0;i<number.length;i++) {
-            if(chars.indexOf(number.substr(i,1))>=base) return number + " is not valid base " + base;
-        }
-        var value = 0;
-        for(let i=0; i<number.length; i++) {
-            value += chars.indexOf(number.substr(-i-1, 1))*(Math.pow(base, i));
-        }
-
-        var output = "";
-        const length = Math.floor(Math.log(value)/Math.log(newBase)+1);
-        for(let i=length-1; i>=0; i--) {
-            let place = Math.pow(newBase, i);
-            output += chars.substr(Math.floor(value/place), 1);
-            value -= place*Math.floor(value/place);
-        }
-        return number=='0'?'0':output;
-    }
-    document.getElementById("baseconvert").addEventListener("click", function() {
+    byId("baseconvert").addEventListener("click", function() {
         let number = document.getElementById("basenumber").value;
         let base = parseInt(document.getElementById("base").value);
         let newBase = parseInt(document.getElementById("newBase").value);
         document.getElementById("baseoutput").innerHTML = "= " + changeBase(number, base, newBase);
     })
-    function normToSexTime(hours, minutes, seconds) {
-        let secs = (hours * 3600 + minutes * 60 + seconds) / (86400 / 46656)
-        return "is " + (((secs/1296)%36==0)?'0':changeBase((parseInt(secs/1296)%36).toString(), 10, 6)) + ":" +
-            (((secs/36)%36==0)?'0':changeBase((parseInt(secs/36)%36).toString(), 10, 6)) + ":" +
-            (((secs)%36==0)?'0':changeBase((parseInt(secs)%36).toString(), 10, 6))
-    }
-    document.getElementById("timeconvert").addEventListener("click", function() {
+    byId("timeconvert").addEventListener("click", function() {
         let hours = isNaN(parseInt(document.getElementById("hours").value))?0:parseInt(document.getElementById("hours").value);
         let minutes = isNaN(parseInt(document.getElementById("minutes").value))?0:parseInt(document.getElementById("minutes").value);
         let seconds = isNaN(parseInt(document.getElementById("seconds").value))?0:parseInt(document.getElementById("seconds").value);
