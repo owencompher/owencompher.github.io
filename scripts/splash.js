@@ -43,7 +43,10 @@ const splashes = [
     "trapezoids banned on grounds of sex appeal",
     "a",
     "oh no, not again",
-    "don't panic"
+    "don't panic",
+    "live for the yuhs, get through the bruhs",
+    "on a spaceship, persevering",
+    "use my hands for everything but steering"
 ]
 
 document.getElementById('splash').innerHTML = splashes[Math.floor(Math.random()*splashes.length)]
