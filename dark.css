@@ -15,3 +15,7 @@ nav a {
 .bg {
     background-color: #333236;
 }
+
+select {
+    background-color: #f0f0eb;
+}

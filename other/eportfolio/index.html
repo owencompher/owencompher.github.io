@@ -13,42 +13,78 @@
     </style>
     <style id="link-color">.link {color: #545155}</style>
     <link rel="stylesheet" href="../../style.css" media="screen and (min-device-width: 481px)">
+    <link rel="stylesheet" href="../../dark.css">
     <link rel="stylesheet" href="../../styleHandheld.css" media="screen and (max-device-width: 480px)">
     <link rel="shortcut icon" type="image/jpg" href="../../resources/heart/0.png">
 </head>
 <body>
     <main>
-        <p>placeholder ePortfolio page (I'm cooler than Wix)</p>
+        <p>Welcome to Owen Compher's ePortfolio page<br><br>
+        &emsp;&emsp;I am a web developer and am cooler than wix or weebly, so I thought I would just add this project to
+        my existing <a class="link" href="https://owencompher.me" target="_blank">website</a>.</p>
         <br>
-        <b>ePortfolio Content</b>
-        <div class="content">
-        <button type="button" class="collapsible link" style="font-weight: normal">+ Reflection</button>
-            <p class="content" style="display: none">
-                &emsp; This will be my reflection statement. Placeholder text
-                placeholder text placeholder text placeholder text placeholder text placeholder text
-                placeholder text. Placeholder text why are you reading this placeholder text placeholder text.<br>
-                &emsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia mollit anim id est laborum.</p>
-        <br>
-        <button type="button" class="collapsible link" style="font-weight: normal">+ Annotated Bibliography</button>
-            <div class="content" style="display: none">
-                <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=
-                            https://owencompher.me/resources/documents/ENC/p1/1-bib.docx'
-                        width='100%' height='650px' style="border: none"></iframe>
-            </div>
-        <button type="button" class="collapsible link" style="font-weight: normal">+ PDF</button>
-            <div class="content" style="display: none">
-                <p>pdf embed proof-of-concept. my resume as placeholder</p>
-                <iframe src="../../resources/documents/resume.pdf" width="100%" height="650px" style="border: none"></iframe>
-            </div>
-        </div>
-        <br>
-        <p>please visit my <a class="link" href="https://owencompher.me" target="_blank">homepage</a></p>
+        <b>Reflection Statement</b>
+        <p id="reflection" style="display: block" class="content">
+            &emsp;&emsp;This will be my reflection statement. Placeholder text
+        placeholder text placeholder text placeholder text placeholder text placeholder text
+        placeholder text. Placeholder text why are you reading this placeholder text placeholder text.<br>
+        &emsp;&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia mollit anim id est laborum.</p>
+        <button type="button" class="link" style="font-weight: normal; display: inline; width: auto"
+                onclick="
+            let reflection = document.getElementById('reflection')
+            if (reflection.style.display === 'block') {
+                reflection.style.display = 'none'
+                this.innerHTML = '(hidden)'
+            } else {
+                reflection.style.display = 'block'
+                this.innerHTML = '(hide)'
+            }">(hide reflection)</button>
+        <br><br>
+        <b>Project 1</b>
+        <select class="link" onclick="selVersion(this)">
+            <option value="p1/1-final.docx">final version</option>
+            <option value="p1/1-bib.docx">annotated bib</option>
+            <option value="p1/1-revision.docx">revised version</option>
+            <option value="HIDE">(hidden)</option>
+        </select>
+        <iframe class="content" src="https://view.officeapps.live.com/op/embed.aspx?src=
+            https://owencompher.me/other/eportfolio/docs/p1/1-final.docx"
+            style="border: none" width="100%" height="650px"></iframe>
+        <br><br>
+        <b>Project 2</b>
+        <select class="link" onclick="selVersion(this)">
+            <option value="p2/2-final.docx">final version</option>
+            <option value="p2/2-draft.docx">first draft</option>
+            <option value="HIDE">(hidden)</option>
+        </select>
+        <iframe class="content" src="https://view.officeapps.live.com/op/embed.aspx?src=
+            https://owencompher.me/other/eportfolio/docs/p2/2-final.docx"
+                style="border: none" width="100%" height="650px"></iframe>
+        <br><br>
+        <b>Project 3</b>
+        <select class="link" onclick="selVersion(this)">
+            <option value="p3/3-final.docx">final version</option>
+            <option value="p3/3-draft.docx">first draft</option>
+            <option value="HIDE">(hidden)</option>
+        </select>
+        <iframe class="content" src="https://view.officeapps.live.com/op/embed.aspx?src=
+            https://owencompher.me/other/eportfolio/docs/p3/2-final.docx"
+                style="border: none" width="100%" height="650px"></iframe>
+        <br><br><br>
     </main>
-    <script src="../../scripts/collapsible.js"></script>
+    <script>
+        function selVersion(selector) {
+            if (selector.value === 'HIDE') selector.nextElementSibling.style.display = 'none'
+            else selector.nextElementSibling.style.display = 'block'
+            selector.nextElementSibling.src =
+                `https://view.officeapps.live.com/op/embed.aspx?src=
+                https://owencompher.me/other/eportfolio/docs/${selector.value}`
+        }
+    </script>
     <script src="../../scripts/link-color.js"></script>
     <script src="../../scripts/dark-theme.js"></script>
 </body>

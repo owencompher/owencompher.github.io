@@ -131,6 +131,14 @@ iframe {
     padding-top: 5px;
 }
 
+select {
+    appearance: none;
+    border: none;
+    background-color: #333236;
+    font-family: "JetBrains Mono";
+    font-size: 20px
+}
+
 button {
     width: 100%;
     background: none;
