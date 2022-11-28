@@ -20,7 +20,7 @@ try {
 
 updatePage()
 
-function setCookie() { document.cookie = "JSON=" + JSON.stringify(cookie) + "; domain=owencompher.me" }
+function setCookie() { document.cookie = "JSON=" + JSON.stringify(cookie) + "; path=/; domain=owencompher.me" }
 
 function spinWheel() {
     cookie.color = (cookie.color + 1) % 5
