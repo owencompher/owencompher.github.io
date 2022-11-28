@@ -8,11 +8,7 @@ const colors = [
 
 let cookie;
 try {
-    if (document.cookie.split(";")[0].charAt(5) !== '{') {
-        // convert cookie from old format
-        cookie = {color: parseInt(document.cookie.charAt(document.cookie.indexOf("color")+6))}
-        setCookie()
-    } else cookie = JSON.parse(document.cookie.split(";")[0].substring(5));
+    cookie = JSON.parse(document.cookie.substring(document.cookie.indexOf('{'), document.cookie.indexOf('}')+1));
 } catch(error) {
     cookie = {color: 0}
     setCookie()
