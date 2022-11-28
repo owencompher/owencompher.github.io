@@ -5,38 +5,28 @@ const colors = [
     '#d8828e',
     '#e8b382'
 ]
-if(document.cookie.indexOf("color")==-1){
-    document.cookie = `color=0; path=/; domain=owencompher.me`
+
+let cookie;
+try {
+    cookie = JSON.parse(document.cookie.split(";")[0].substring(5));
+} catch(error) {
+    cookie = {color: 0}
+    setCookie()
 }
-let colori = document.cookie.substr(document.cookie.indexOf("color")+6, 1)
-if(colori.length < 1) colori = 0;
-let color = colors[colori]
-if(!color) color = colors[0];
-document.getElementById('link-color').innerHTML =
-    `.link {color: ${color}}`
-document.querySelector("link[rel='shortcut icon']").setAttribute('href', `https://owencompher.me/resources/heart/${colori}.png`)
+
+updatePage()
+
+function setCookie() { document.cookie = "JSON=" + JSON.stringify(cookie) + "; domain=owencompher.me" }
 
 function spinWheel() {
-    cycleColors()
-    const wheel = document.getElementById("wheel")
-    var index = document.cookie.indexOf("color");
-    let colori = document.cookie.substr(index + 6, 1)
-    if (!colori && parseInt(wheel.src.substr(16,1))<=4) colori = parseInt(wheel.src.substr(16,1))+1
-    else if (!colori) colori = 0
-    document.getElementById("wheel").src = `https://owencompher.me/resources/wheel/${colori}.png`
+    cookie.color = (cookie.color + 1) % 5
+    updatePage()
+    setCookie()
 }
 
-function cycleColors() {
-    var index = document.cookie.indexOf("color");
-    if (index == -1) {
-        document.cookie = `color=0; path=/; domain=owencompher.me`
-        var index = document.cookie.indexOf("color");
-    }
-    if (parseInt(document.cookie.substr(index + 6, 1)) == 4) document.cookie = `color=0; path=/; domain=owencompher.me`
-    else document.cookie = `color=${parseInt(document.cookie.substr(index + 6, 1)) + 1}; path=/; domain=owencompher.me`
-    const colori = document.cookie.substr(index + 6, 1)
-    let color = colors[colori]
-    if (!color) color = colors[0];
-    document.getElementById('link-color').innerHTML =
-        `.link {color: ${color}}`
+function updatePage() {
+    document.getElementById('link-color').innerHTML = `.link {color: ${colors[cookie.color]}}`
+    document.querySelector("link[rel='shortcut icon']")
+        .setAttribute('href', `https://owencompher.me/resources/heart/${cookie.color}.png`)
+    document.getElementById('wheel').src = `https://owencompher.me/resources/wheel/${cookie.color}.png`
 }
