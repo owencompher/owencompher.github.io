@@ -2,23 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://owencompher.me/</loc>
-<lastmod>2022-11-27T21:16:14-05:00</lastmod>
+<lastmod>2022-12-10T21:33:57-05:00</lastmod>
 </url>
 <url>
 <loc>https://owencompher.me/projects.html</loc>
-<lastmod>2022-11-27T21:16:14-05:00</lastmod>
+<lastmod>2022-12-10T21:33:57-05:00</lastmod>
 </url>
 <url>
 <loc>https://owencompher.me/other/</loc>
-<lastmod>2022-11-27T21:16:14-05:00</lastmod>
+<lastmod>2022-12-10T21:33:57-05:00</lastmod>
 </url>
 <url>
 <loc>https://owencompher.me/other/clock.html</loc>
 <lastmod>2022-11-01T23:32:44-04:00</lastmod>
-</url>
-<url>
-<loc>https://owencompher.me/other/eportfolio.html</loc>
-<lastmod>2022-11-27T21:16:14-05:00</lastmod>
 </url>
 <url>
 <loc>https://owencompher.me/other/haha_secret_blog_page.html</loc>
@@ -27,6 +23,10 @@
 <url>
 <loc>https://owencompher.me/other/num2text.html</loc>
 <lastmod>2022-11-01T23:32:44-04:00</lastmod>
+</url>
+<url>
+<loc>https://owencompher.me/other/eportfolio/</loc>
+<lastmod>2022-12-07T13:47:45-05:00</lastmod>
 </url>
 <url>
 <loc>https://owencompher.me/resources/documents/resume.pdf</loc>
