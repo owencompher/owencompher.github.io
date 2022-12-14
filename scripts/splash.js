@@ -24,7 +24,7 @@ const splashes = [
     "\"sexier than it first appears\"",
     "now in color!",
     "\"everybody do the flop!\"",
-    "#1 New York Times bestseller (trust me bro)",
+    "#1 New York Times bestseller",
     "being gay, <s>doing crime</s> since 2003",
     "y He require ur is r",
     "Technoblade never dies!",
@@ -46,7 +46,19 @@ const splashes = [
     "don't panic",
     "live for the yuhs, get through the bruhs",
     "on a spaceship, persevering",
-    "use my hands for everything but steering"
+    "use my hands for everything but steering",
+    "<b style='font-weight: normal' onclick='this.innerHTML = `go fuck yourself (this is a joke)`'>knock knock</b>",
+    "zoo wee mama!",
+    "nut up or shut up",
+    "I could use a Twinkie...",
+    "I'd rather be a pig than a fascist",
+    '<span style="color: #d8828e">c</span><span style="color: #e8b382">o</span><span style="color: #ffff8f">l</span>' +
+    '<span style="color: #78e098">o</span><span style="color: #849ad8">r</span><span style="color: #a776c1">f</span>' +
+    '<span style="color: #d8828e">u</span><span style="color: #e8b382">l</span><span style="color: #ffff8f">!</span>',
+    '<span style="color: #d8828e">g</span><span style="color: #e8b382">a</span><span style="color: #ffff8f">y</span>' +
+    '<span> </span><span style="color: #78e098">r</span><span style="color: #849ad8">i</span>' +
+    '<span style="color: #a776c1">g</span><span style="color: #d8828e">h</span><span style="color: #e8b382">t</span>' +
+    '<span style="color: #ffff8f">s</span><span style="color: #78e098">!</span>'
 ]
 
 document.getElementById('splash').innerHTML = splashes[Math.floor(Math.random()*splashes.length)]
