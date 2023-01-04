@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owen Compher's Other Things</title>
     <style type="text/css">* { padding: 0; margin: 0; }
     .link {
@@ -17,9 +18,9 @@
 <body>
     <div class="static">
         <nav>
-            <a class="link" href="https://owencompher.github.io">Home</a>
+            <a class="link home" href="https://owencompher.github.io">Home</a>
             <a class="link" href="https://owencompher.me/projects.html">Projects</a>
-            <a class="o2c link" href="https://owencompher.me/other">Other</a>
+            <a class="link title" href="https://owencompher.me/other">Other</a>
             <div>
                 <span>Color</span>
                 <img id="wheel" src="../resources/wheel/0.png" height="3vw" onclick="spinWheel()">
@@ -37,6 +38,7 @@
         <div class="content">
             <a class="link" href="https://www.youtube.com/channel/UCJOh5FKisc0hUlEeWFBlD-w" target="_blank">jan Misali</a><br>
             <a class="link" href="http://vihart.com/" target="_blank">Vi Hart</a><br>
+            <a class="link" href="https://www.briandavidgilbert.com/" target="_blank">Brian David Gilbert</a><br>
             <a class="link" href="https://incompetech.com/" target="_blank">Kevin MacLeod</a><br>
             <a class="link" href="https://xkcd.com/" target="_blank">xkcd</a><br>
             <a class="link" href="https://100r.co/site/home.html" target="_blank">Hundred Rabbits</a><br>
@@ -88,12 +90,17 @@
             </div>
         </div>
         <br>
-        <b>My things:</b>
+        <b>Things I like:</b>
             <div class="content">
                 <button type="button" class="collapsible link" style="font-weight: normal">+ music</button>
-                <iframe src="https://open.spotify.com/embed/playlist/1bzdKHKlvZSb72KtaEQnY0?theme=0"
-                        width="100%" height="230px" frameBorder="0" allowtransparency="true"
-                        allow="encrypted-media" class="content" style="display: none"></iframe>
+                <!--iframe src="https://open.spotify.com/embed/playlist/1bzdKHKlvZSb72KtaEQnY0?theme=0"
+                        width="100%" height="152px" frameborder="0" allowtransparency="true"
+                        allow="encrypted-media" class="content" style="display: none"></iframe-->
+                <iframe style="display: none" class="content"
+                        src="https://open.spotify.com/embed/playlist/1bzdKHKlvZSb72KtaEQnY0?theme=0"
+                        width="100%" height="380" frameBorder="0" allowfullscreen=""
+                        allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
                 <br>
                 <button type="button" class="collapsible link" style="font-weight: normal">+ animated music videos</button>
                 <iframe width="560" height="315" class="content" style="display: none"
