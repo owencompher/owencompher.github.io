@@ -47,7 +47,7 @@ const splashes = [
     "live for the yuhs, get through the bruhs",
     "on a spaceship, persevering",
     "use my hands for everything but steering",
-    "<b style='font-weight: normal' onclick='this.innerHTML = `go fuck yourself (this is a joke)`'>knock knock</b>",
+    "<b style='font-weight: normal' onclick='this.innerHTML = `\"go fuck yourself\" (this is a <a class=link href=\"https://youtu.be/Yn38I0Y-zqg\" target=\"_blank\">joke</a>)`'>\"knock knock\"</b>",
     "zoo wee mama!",
     "nut up or shut up",
     "I could use a Twinkie...",
@@ -58,7 +58,9 @@ const splashes = [
     '<span style="color: #d8828e">g</span><span style="color: #e8b382">a</span><span style="color: #ffff8f">y</span>' +
     '<span> </span><span style="color: #78e098">r</span><span style="color: #849ad8">i</span>' +
     '<span style="color: #a776c1">g</span><span style="color: #d8828e">h</span><span style="color: #e8b382">t</span>' +
-    '<span style="color: #ffff8f">s</span><span style="color: #78e098">!</span>'
+    '<span style="color: #ffff8f">s</span><span style="color: #78e098">!</span>',
+    "\"I was gay once, for a while\"",
+    "1. e4"
 ]
 
 document.getElementById('splash').innerHTML = splashes[Math.floor(Math.random()*splashes.length)]
