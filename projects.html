@@ -2,88 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owen Compher's Projects</title>
-    <style type="text/css">* { padding: 0; margin: 0; }
-    .link {
-        text-decoration: none;
-    }
-    .link:hover {color: #ffff8f}
-    .link:active {color: #f0f0eb}</style>
-    <style id="link-color">.link {color: #545155}</style>
-    <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 481px)">
-    <link rel="stylesheet" href="styleHandheld.css" media="screen and (max-device-width: 480px)">
-    <link rel="shortcut icon" type="image/jpg" href="resources/heart/0.png">
+    <title>Owen - Projects</title>
+    <link rel="shortcut icon" type="image/jpg" href="resources/1.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="static">
-        <nav>
-            <a class="link home" href="https://owencompher.me">Home</a>
-            <a class="title link" href="https://owencompher.me/projects.html">Projects</a>
-            <a class="link" href="https://owencompher.me/other">Other</a>
-            <div>
-                <span>Color</span>
-                <img id="wheel" src="resources/wheel/0.png" height="3vw" onclick="spinWheel()">
-            </div>
+    <div class="top">
+        <nav>pages:
+            <a class="link" href="https://owencompher.me">home,</a>
+            <a class="link" href="https://owencompher.me/about.html">about,</a>
+            <a class="link" href="https://owencompher.me/projects.html">projects,</a>
+            <a class="link" href="https://owencompher.me/other.html">etc.</a>
         </nav>
-        <div class="side">
-            <img class="propic" src="resources/me.png">
-            <div class="bg"></div>
+        <div>
+            <span class="title">Projects</span>
+            <!--a href="https" style="float: right">options</a-->
         </div>
     </div>
     <main>
-        <div class="project">
-            <b>Website</b>-
-            <a class="link" href="https://github.com/owencompher/owencompher.github.io" target="_blank">repository</a>
-            <p class="content">The website that you are reading this on is hosted by GitHub pages. I wrote it from scratch
-                and designed it myself. Visit the <a class="link" href="https://owencompher.github.io" style="width: auto">homepage</a> for more info about
-                the website itself.</p>
-        </div>
-        <br>
-        <div class="project">
-            <b>oBot</b>-
-            <a class="link" href="https://github.com/owencompher/owencompher.github.io" target="_blank">repository</a>
-            <p class="content">oBot is a simple discord bot that I made for use by myself and friends. It has a few simple
-                call-and-response commands, as well as a configuration system and a useful text-to-speech function.</p>
-        </div>
-        <br>
-        <div class="project">
-            <b>Pixel Art</b>-
-            <a class="link" href="https://gallery.owencompher.me" target="_blank">Gallery</a>
-            <p class="content">I make a lot of pixel art because it is easy; all I have to do is click squares. I put it
-                on a Tumblr with a matching theme. (This used to be a tab on the main site navbar)</p>
-        </div>
-        <br>
-        <div class="project">
-            <b>Desatur8</b>-
-            <a class="link" href="https://lospec.com/palette-list/desatur8" target="_blank">Lospec page</a>
-            <p class="content">A small color palette with simple, somewhat desaturated colors that I designed to make
-                pixel art with. Every color on this website is from the palette.</p>
-        </div>
-        <br>
-        <div class="project">
-            <b>Drum Kit Sim</b>-
-            <a class="link" href="https://www.lexaloffle.com/bbs/?tid=44055" target="_blank">PIC0-8 forum</a>
-            <p class="content">A small project I made in the PICO-8 game console. Controls are Z and X for the cymbals and
-                the arrow keys for the drums.</p>
-        </div>
-        <br>
-        <div class="project">
-            <b>Converters</b>-
-            <a class="link" href="https://owencompher.me/other/num2text.html" target="_blank">page</a>
-            <p class="content">A collection of little javascript applets that I made for fun or practice. It currently has
-                a base converter, a decimal to text converter, and a seximal to text converter.</p>
-        </div>
-        <br>
-        <div class="project">
-            <b>Seximal Time</b>-
-            <a class="link" href="https://owencompher.me/other/clock.html" target="_blank">page</a>
-            <p class="content">Convert local or UTC into seximal time, and displays them in different ways. The graphic is
-                hard-coded from scratch in SVG.</p>
-        </div>
-        <br>
+        <p>These are some things that I've made or worked on. Generally larger/more recent things are listed first.</p>
+        <p>
+            <a href="https://github.com/owencompher/owencompher.github.io" target="_blank">My website</a> (which includes this page) is designed, built, and maintained entirely by me. It is mostly hosted on GitHub Pages. <br><br>
+            <a href="https://github.com/owencompher/xl" target="_blank">xl</a> is a lambda calculus interpreter designed to extend any other language by implementing lambda abstractions. I want to eventually add more features to the program. <br>
+            <br>
+            Other things: <br>
+            - <a href="https://github.com/owencompher/oBot" target="_blank">oBot</a>, a simple discord bot that I made for use by myself and friends. <br>
+            - <a href="https://lospec.com/palette-list/desatur8" target="_blank">Desatur8</a>, a tiny color palette I designed to make pixel art with. <br>
+            - <a href="convert.html" target="_blank">converters</a> in JavaScript, including base conversion and number to text. <br>
+            - a <a href="https://www.lexaloffle.com/bbs/?tid=44055" target="_blank">Drum Kit</a>, which I made in the PICO-8 game console.
+        </p>
     </main>
-    <script src="scripts/link-color.js"></script>
-    <script src="scripts/dark-theme.js"></script>
 </body>
 </html>

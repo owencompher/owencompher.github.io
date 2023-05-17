@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owen Compher's Website</title>
+    <link rel="shortcut icon" type="image/jpg" href="../resources/heart/1.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--div class="top">
+        <nav>pages:
+            <a class="link" href="https://owencompher.me">home,</a>
+            <a class="link" href="https://owencompher.me/about.html">about,</a>
+            <a class="link" href="https://owencompher.me/projects.html">projects,</a>
+            <a class="link" href="https://owencompher.me/other.html">etc.</a>
+        </nav>
+        <div>
+            <span class="title">Converters</span>
+            <a href="https" style="float: right">options</a>
+        </div>
+        <hr>
+    </div-->
+    <main style="margin-top: 80px;">
+        <p>convert numbers from one base (like 2 for binary, 10 for decimal, or 6 for 
+            <a class="link" href="https://www.seximal.net/" target="_blank">seximal</a>
+            ) to any other. It supports bases from 2 to 36, using 0-9 and A-Z for a total of 36 characters.</p>
+        <input id="basenumber" placeholder="number" style="width: 90px">
+        <input id="base" placeholder="base" style="width: 65px"> to
+        <input id="newBase" placeholder="base" style="width: 65px">
+        <button class="link" id="baseconvert" style="width: auto; font-weight: normal">Go</button><br>
+        <p id="baseoutput">= 0</p>
+        <hr><br>
+        <p>convert numbers into their "spoken word" formats</p>
+        <input id="number" placeholder="number" size="3" style="width: 200px">
+        <button id="convert" class="link" style="width: auto; font-weight: normal">Go</button><br>
+        <p id="output">is </p>
+        <hr><br>
+        <p>this one is for a <a class="link" href="https://www.seximal.net/" target="_blank">seximal</a> number (digits 0-5 only)</p>
+        <input id="sexnumber" placeholder="seximal number" size="3" style="width: 200px">
+        <button id="sexconvert" class="link" style="width: auto; font-weight: normal">Go</button><br>
+        <p id="sexoutput">is </p>
+        <hr><br>
+        <p>convert a normal (24hr) time into <a class="link" href="https://owencompher.me/clock.html" target="_blank">seximal time</a></p>
+        <input id="hours" placeholder="hours" style="width: 65px">
+        <input id="minutes" placeholder="minutes" style="width: 90px">
+        <input id="seconds" placeholder="seconds" style="width: 90px">
+        <button id="timeconvert" class="link" style="width: auto; font-weight: normal">Go</button><br>
+        <p id="timeoutput">is </p>
+        <script src="scripts/convert.js"></script>
+        <script>
+            byId("convert").addEventListener("click", function() {
+                let number = document.getElementById("number").value;
+                document.getElementById("output").innerHTML = "is \" " + numToText(number) + "\"";
+            })
+            byId("sexconvert").addEventListener("click", function() {
+                let number = document.getElementById("sexnumber").value;
+                document.getElementById("sexoutput").innerHTML = "is \" " + seximalToNom(number) + "\" in seximal nomenclature";
+            })
+            byId("baseconvert").addEventListener("click", function() {
+                let number = document.getElementById("basenumber").value;
+                let base = parseInt(document.getElementById("base").value);
+                let newBase = parseInt(document.getElementById("newBase").value);
+                document.getElementById("baseoutput").innerHTML = "= " + changeBase(number, base, newBase);
+            })
+            byId("timeconvert").addEventListener("click", function() {
+                let hours = isNaN(parseInt(document.getElementById("hours").value))?0:parseInt(document.getElementById("hours").value);
+                let minutes = isNaN(parseInt(document.getElementById("minutes").value))?0:parseInt(document.getElementById("minutes").value);
+                let seconds = isNaN(parseInt(document.getElementById("seconds").value))?0:parseInt(document.getElementById("seconds").value);
+                document.getElementById("timeoutput").innerHTML = normToSexTime(hours, minutes, seconds);
+            })
+        </script>
+        <hr><br><br>
+        <p>part of <a href="index.html">Owen Compher's website</a></p>
+    </main>
+</body>
+</html>

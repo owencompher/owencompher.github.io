@@ -1,163 +1,31 @@
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("resources/JBRegular.ttf");
-}
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("resources/JBItalic.ttf");
-    font-style: italic;
-}
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("resources/JBBold.ttf");
-    font-weight: bold;
-}
-
 body {
-    #background-image: url("resources/stars.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    font-family: Consolas, monospace;
+    font-size: 18px;
     background-color: #333236;
-    font-family: "JetBrains Mono";
     color: #f0f0eb;
-    max-width: 1000px;
-    alignment: center;
+    width: 1000px;
     margin: auto;
 }
-
-.static {
-    visibility: hidden;
-    width: 100%;
-    max-width: 1000px;
-    position: fixed;
-    top: 1vw;
-}
-
-.splash {
-    visibility: visible;
-    font-size: 15px;
-    margin: 0 0 1vw 0;
-}
-
-.side {
-    width: 8vw;
-    float: left;
-    margin: 1vw;
-    margin-bottom: 0;
-}
-
-.bg {
-    background-color: #f0f0eb;
-    height: calc(100vh - 8vw);
-    width: 4px
-}
-
-.propic {
-    height: 8vw;
-}
-
-.side * {
-    visibility: visible;
-    display: block;
-    text-align: center;
-    margin: auto;
-}
-
-nav {
+.top {
+    position: fixed; top: 0; padding-top: 80px;
     background-color: #333236;
-    z-index: -1;
-    visibility: visible;
-    position: absolute;
-    width: 100%;
-    max-width: calc(1000px - 10vw);
-    height: 5vw;
-    padding-left: 10vw;
-    margin-top: 2.5vw;
-    float: left;
-    border: 4px solid #f0f0eb;
+    height: 80px;
+    width: 900px;
+    border-bottom: 1px solid;
 }
-
-nav a {
-    line-height: 5vw;
-    float: left;
-    text-decoration: none;
-    margin: 0 20px 0 5px;
-    font-size: 25px;
-    font-weight: bold;
-    color: #f0f0eb;
-}
-
-nav div {
-    float: right;
-    height: 100%;
-    padding-top: 1vw;
-    padding-right: 2vw
-}
-nav span {
-    vertical-align: top;
-    line-height: 3vw;
-    height: 3vw
-}
-
-nav img {
-    height: 3vw
-}
-
+nav { margin-bottom: 10px; }
 .title {
-    font-size: 35px;
-    font-weight: bolder
+    font-size: 36px;
+    font-weight: bold;
 }
-
-
 main {
-    padding-right: 6vw;
-    padding-top: 11vw;
-    padding-left: 6vw;
-    font-size: 20px;
+    width: 850px;
+    margin-top: 180px;
+    padding-left: 5px;
 }
-
-.project {width: 100%}
-.project * {display: inline-block; width: 20%;}
-.project .content {
-    display: block;
-    width: 100%;
-}
-
-.columns {display: table}
-.aboutColumn {width: 60%; float: left}
-.linkColumn {margin-left: 5%; float: left}
-
-iframe {
-    padding-top: 5px;
-}
-
-select {
-    appearance: none;
-    border: none;
-    background-color: #333236;
-    font-family: "JetBrains Mono";
-    font-size: 20px
-}
-
-button {
-    width: 100%;
-    background: none;
-    border: none;
+.indent { padding-left: 10px; }
+a {
     text-decoration: none;
-    text-align: left;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
+    color: #849ad8;
 }
-
-.content {
-    padding-left: 22px;
-}
-
-input {
-    background: none;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
-    outline-style: none;
-    outline-color: white;
-    border: none;
-}
+a:hover { color: #ffff8f; }

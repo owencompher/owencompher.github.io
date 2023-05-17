@@ -1,13 +1,15 @@
 let frog = {
     sprite: 0,
-    pos: 0,
+    pos: 50,
     q: []
 };
 
 function update() {
     const frogElem = document.getElementById('frog');
-    frogElem.setAttribute("src", `../resources/frog/${frog.sprite-(frog.sprite<10?0:8)}.png`);
-    frogElem.setAttribute("style", `transform: scaleX(${frog.sprite<10?1:-1}); left: ${50-frog.pos}%`);
+    frogElem.setAttribute("src", `resources/frog/${frog.sprite-(frog.sprite<10?0:8)}.png`);
+    frogElem.setAttribute("style", `transform: scaleX(${frog.sprite<10?-1:1});
+                                    position: relative;
+                                    left: ${frog.pos}%`);
 }
 
 let timer = setInterval(function() {
@@ -28,9 +30,9 @@ let timer = setInterval(function() {
         let choice = Math.random();
         switch (frog.sprite) {
             case 10: // facing left
-                if (choice > 0.9 && frog.pos < 50) frog.q.push(0,0,0,17); // turn middle
+                if (choice > 0.9 || frog.pos < 5) frog.q.push(0,0,0,17); // turn middle
                 else if (choice > 0.7) frog.q.push(10,16,15,14,13); // jump left
-                else if (choice > 0.4) frog.q.push(10,11,12,12,11); // croak right
+                else if (choice > 0.4) frog.q.push(10,11,12,12,12,11); // croak right
                 break;
             case 0: // facing front
                 if (choice > 0.75) frog.q.push(0,1); // blink
@@ -38,11 +40,11 @@ let timer = setInterval(function() {
                 else if (choice > 0.55) frog.q.push(10,10,10,17); // turn left
                 break;
             case 2: // facing right
-                if (choice > 0.9 && frog.pos > -50) frog.q.push(0,0,0,9) // turn middle
+                if (choice > 0.9 || frog.pos > 95) frog.q.push(0,0,0,9) // turn middle
                 else if (choice > 0.7) frog.q.push(2,8,7,6,5); // jump right
-                else if (choice > 0.4) frog.q.push(2,3,4,4,3); // croak right
+                else if (choice > 0.4) frog.q.push(2,3,4,4,4,3); // croak right
                 break;
         }
     }
     update();
-}, 250);
+}, 200);
