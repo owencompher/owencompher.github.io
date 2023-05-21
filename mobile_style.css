@@ -1,0 +1,30 @@
+body {
+    font-family: Consolas, monospace;
+    font-size: 36px;
+    background-color: #333236;
+    color: #f0f0eb;
+    margin: auto;
+}
+.top {
+    position: fixed; top: 0; padding-top: 10px;
+    width: 100%;
+    height: 160px;
+    background-color: #333236;
+}
+nav { margin-bottom: 10px; }
+
+main {
+    width: 100%;
+    margin-top: 180px;
+    padding-left: 5px;
+}
+.title {
+    font-size: 72px;
+    font-weight: bold;
+}
+.indent { padding-left: 10px; }
+a {
+    text-decoration: none;
+    color: #849ad8;
+}
+a:hover { color: #ffff8f; }
