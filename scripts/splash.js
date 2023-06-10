@@ -60,7 +60,14 @@ const splashes = [
     '<span style="color: #a776c1">g</span><span style="color: #d8828e">h</span><span style="color: #e8b382">t</span>' +
     '<span style="color: #ffff8f">s</span><span style="color: #78e098">!</span>',
     "\"I was gay once, for a while\"",
-    "1. e4"
+    "1. e4",
+    "google en passant",
+    "Life is a highway",
+    "MILF (man, I love frogs)",
+    "Go Noles!",
+    "Quoth the Raven, \"Nevermore.\"",
+    "time complexity of O(n)",
+    "page loaded in 12.73 parsecs"
 ]
 
 document.getElementById('splash').innerHTML = splashes[Math.floor(Math.random()*splashes.length)]
