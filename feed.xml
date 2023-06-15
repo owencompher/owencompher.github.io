@@ -5,11 +5,12 @@
 
   <title>Owen's Feed</title>
   <link href="http://owencompher.me"/>
+  <link rel="self" href="http://owencompher.me/feed.xml"/>
   <updated>2023-06-14T22:08:00-04:00</updated>
   <author>
     <name>Owen Compher</name>
   </author>
-  <id>http://owencompher.me</id>
+  <id>http://owencompher.me/</id>
 
   <entry>
     <title>Starting my Atom Feed</title>
@@ -17,22 +18,23 @@
     <id>tag:owencompher.me,2023:/feed.xml#0001</id>
     <updated>2023-06-15T03:00:00-04:00</updated>
     <summary>The first post; about the feed</summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">
         <p>Since I've stopped using most social media the last few years, and since the reddit blackout/loss of apollo, I've started subscribing to rss/atom feeds and using that as my main source of entertainment. It has inspired me to create my own feed.</p>
         <p>My idea for content is not to start blogging or making any kind of content, but instead a kind of manual aggregation of anything I post anywhere. Anytime I significantly update/add to my website or post on any social media I will document it or link to it here. If I ever do feel like writing a blog post or publishing some other kind of thing, I could always just do it here, instead of having to find it's own spot for it.</p>
         <p>Basically, I don't think any other categories of content I publish deserve their own feed, so I'm making one for everything. Hopefully that will allow the frequency of posts stay somewhere about once a month.</p>
-      </div>
-    </content>
+    </div></content>
   </entry>
 
   <entry>
     <title>A Tumblr Post</title>
-    <link href="http://owencompher.me/feed.xml#0002"/>
+    <link rel="alternate" href="https://owen-af.tumblr.com/post/711272935892074496"></link>
+    <link rel="self" href="https://owencompher.me/feed.xml#0002"></link>
     <id>tag:owencompher.me,2023:/feed.xml#0002</id>
     <updated>2023-06-15T12:00:00-04:00</updated>
     <summary>Testing content types (Tumblr post)</summary>
-    <content src="https://www.tumblr.com/owen-af/711272935892074496" type="html"></content>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">
+      This entry represents a <a href="https://owen-af.tumblr.com/post/711272935892074496">Tumblr post</a>.
+    </div></content>
   </entry>
 
 </feed>
