@@ -29,8 +29,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:for-each select="*/*[name()='entry']">
           <div><xsl:attribute name="id"><xsl:value-of select="substring-after(*[name()='id'], 'feed.xml#')"/></xsl:attribute>
             [<xsl:value-of select="substring(*[name()='updated'], 0, 11)"/>] 
-            <a><xsl:attribute name="href"><xsl:value-of select="substring-after(*[name()='id'], '/')"/>
-            </xsl:attribute><xsl:value-of select="*[name()='title']"/>: </a>  
+            <a><xsl:attribute name="href"><xsl:value-of select="*[name()='link']/@*[name()='href']"/></xsl:attribute>
+            <xsl:value-of select="*[name()='title']"/>: </a>  
             <i><xsl:value-of select="*[name()='summary']"/></i> 
             <a class="link" onclick="toggle(this)"> (show)</a>
             <div hidden="">
