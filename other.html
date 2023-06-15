@@ -26,6 +26,12 @@
     </div>
     <main>
         <i><p class="splash content" id="splash">click for details</p></i><script src="scripts/splash.js"></script>
+        <div id="status">
+            latest entry from <a href="/feed.xml">my feed:</a><br>
+            [<span id="status-date"></span>] <a id="status-title" target="_blank"></a>: <i id="status-summary"></i>
+        </div>
+        <br>
+        <script type="text/javascript">getRecent(buildEntryElement);</script>
         <b>cool people:</b>
         <div class="indent">
             <a class="link" href="https://www.youtube.com/channel/UCJOh5FKisc0hUlEeWFBlD-w" target="_blank">jan Misali</a><br>

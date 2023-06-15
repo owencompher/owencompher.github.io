@@ -6,6 +6,8 @@
     <link rel="shortcut icon" type="image/jpg" href="resources/1.png">
     <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 481px)">
     <link rel="stylesheet" href="mobile_style.css" media="screen and (max-device-width: 480px)">
+    <script type="text/javascript" src="scripts/feed.js"></script>
+    <script type="text/javascript" src="scripts/hide.js"></script>
 </head>
 <body>
     <div class="top">
@@ -26,6 +28,11 @@
         <p>I personally design, build, and maintain everything that appears on this site.</p>
         <p>I own everything that appears in the owencompher.me domain, with the exception of external links. Licensed under 
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" target="_blank">CC BY-NC-SA 4.0.</a></p>
+        <div id="status">
+            latest entry from <a href="/feed.xml">my feed:</a><br>
+            [<span id="status-date"></span>] <a id="status-title" target="_blank"></a>: <i id="status-summary"></i>
+        </div>
+        <script type="text/javascript">getRecent(buildEntryElement);</script>
         <br>
         <a href="https://hotlinewebring.club/o2c/previous" class="link"><==-<</a>
         <a href="https://hotlinewebring.club/" class="link"> hotline webring </a>
