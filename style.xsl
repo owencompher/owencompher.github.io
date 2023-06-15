@@ -34,7 +34,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <i><xsl:value-of select="*[name()='summary']"/></i> 
             <a class="link" onclick="toggle(this)"> (show)</a>
             <div hidden="">
-                <xsl:value-of select="*[name()='content']"/>
+                <xsl:copy-of select="*[name()='content']"/>
             </div>
           </div>
         </xsl:for-each>
