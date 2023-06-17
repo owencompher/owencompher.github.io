@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owen - Kiosk - Join</title>
+    <link rel="shortcut icon" type="image/jpg" href="/resources/image/1.png">
+    <link rel="stylesheet" href="/resources/style/main.css" media="screen and (min-device-width: 481px)">
+    <link rel="stylesheet" href="/resources/style/mobile.css" media="screen and (max-device-width: 480px)">
+</head>
+<body>
+<main style="margin-top: 80px">
+    <h2>Submit your site</h2>
+    <p>From the Neon Kiosk:</p>
+        <div class="indent">
+        <p>Do you write a journal or a blog? Would you like it to be available in this kiosk? Great! You are in the right place.
+        For a journal to be added, it needs to follow the <a href="https://journal.miso.town">HTML Journal</a> format. For a blog, it needs to follow the <a href="https://blog.miso.town">HTML Blog</a> format. Feel free to send the link over:
+        </p>
+        <form method="POST" action="https://riku.miso.town/submit?user_id=1&label=kiosk">
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td><input type="url" name="journal" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <p>Don't have a journal or a blog yet? Create one on <a href="https://ichi.city">ichi</a>! Need help? Send me a message at m15o at posteo dot net.</p>
+        </div>
+        <a href="./">go back</a>
+</main>
+</body>
+</html>

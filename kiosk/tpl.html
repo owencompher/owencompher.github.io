@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owen - Kiosk</title>
+    <link rel="shortcut icon" type="image/jpg" href="/resources/image/1.png">
+    <link rel="stylesheet" href="/resources/style/main.css" media="screen and (min-device-width: 481px)">
+    <link rel="stylesheet" href="/resources/style/mobile.css" media="screen and (max-device-width: 480px)">
+</head>
+<body>
+    <div class="top">
+        <nav>pages:
+            <a class="link" href="index.html">home,</a>
+            <a class="link" href="about.html">about,</a>
+            <a class="link" href="projects.html">projects,</a>
+            <a class="link" href="other.html">etc.</a>
+        </nav>
+        <div>
+            <span class="title">Owen Compher's Kiosk</span>
+            <!--a href="https" style="float: right">options</a-->
+        </div>
+    </div>
+    <main>
+        <p>Just an ordinary looking virtual kiosk. There are <a href="https://journal.miso.town">journals</a> in it!</a></p>
+        <p><a href="join.html" >Submit your site</a> | <a href="about.html">About</a></p>
+        <marquee loop="-1" behavior="alternate" style="background-color: #849ad8; color: #333236;">Just a funny looking Kiosk! Just a funny looking Kiosk! Just a funny looking Kiosk! Just a funny looking Kiosk! Just a funny looking Kiosk!</marquee>
+        {{ range . }}
+        <article>
+            <h2>{{ .Title }} - <a href="{{ .URL }}">{{ .Author }}</a></h2>
+            {{ .Body }}
+        </article>
+        {{ end }}
+    </main>
+<footer>
+    <p><a href="https://journal.miso.town"><img src="https://journal.miso.town/static/banner-htmlj.png"></a></p>
+</footer>
+</body>
+</html>
