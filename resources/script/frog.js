@@ -6,7 +6,7 @@ let frog = {
 
 function update() {
     const frogElem = document.getElementById('frog');
-    frogElem.setAttribute("src", `resources/frog/${frog.sprite-(frog.sprite<10?0:8)}.png`);
+    frogElem.setAttribute("src", `resources/image/frog/${frog.sprite-(frog.sprite<10?0:8)}.png`);
     frogElem.setAttribute("style", `transform: scaleX(${frog.sprite<10?-1:1});
                                     position: relative;
                                     left: ${frog.pos}%`);
