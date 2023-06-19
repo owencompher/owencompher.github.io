@@ -22,13 +22,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <a><xsl:attribute name="href"><xsl:value-of select="*[name()='link']/@*[name()='href']"/></xsl:attribute>
             <xsl:value-of select="*[name()='title']"/>: </a>  
             <i><xsl:value-of select="*[name()='summary']"/></i> 
-            <a class="link" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (show)</a>
-            <div hidden="">
+            <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
+            <div>
                 <xsl:copy-of select="*[name()='content']"/>
             </div>
           </div>
         </xsl:for-each>
     </main>
+    <script type="text/javascript">
+        for(el of document.getElementsByClassName("hider")) toggle(el, el.nextElementSibling, ' (show)', ' (hide)');
+    </script>
 </body>
 </html>
 </xsl:template>
