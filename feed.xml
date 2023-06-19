@@ -13,6 +13,23 @@
   <id>http://owencompher.me/</id>
 
   <entry>
+    <title>On the Indie Web</title>
+    <link rel="self" href="https://owencompher.me/feed.xml#0003"></link>
+    <id>tag:owencompher.me,2023:/feed.xml#0003</id>
+    <updated>2023-06-18T20:30:00-04:00</updated>
+    <summary>I discuss recent site updates</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>In the last couple of days, I've been exploring the indie web and adding to my website/server. It started with some <a href="#0001">interest in feeds</a>, but I've discovered a lot of different little things.</p>
+      <p>To subscribe to feeds, I set up the <a href="https://miniflux.app/">Miniflux</a> feed reader on my web server. It works perfectly for what I was looking for, and for the past week I've been adding feeds and using it in addition to reddit, though I want to transition to using it alone. I strongly recommend the software to anyone else who is thinking about self-hosting feed aggregation. You are also welcome to use <a href="https://miniflux.owencompher.me">my instance</a>, if you email me I'll make an account for you.</p>
+      <p>I also made an account on status.cafe, and have been using it along with the forum. It was created by m15o, who also made a whole bunch of other things I've come across, almost too many to list. A lot of it is focused on blogging and journaling, like <a href="nightfall.city">nightfall.city</a> and a lot of the things linked on it. I think the general mission of providing small, non-commercial social spaces is admirable, and as I transition away from increasingly <a href="https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys">enshittified</a> spaces, these sites provide a nice alternative. I've also been thinking about getting into more Mastodon instances.</p>
+      <p>Some other things I've done:<br/>
+      - a <a href="https://owencompher.me/kiosk">clone</a> of <a href="https://kiosk.nightfall.city/">Neon Kiosk</a><br/>
+      - a personal DAViCal server
+      </p>
+    </div></content>
+  </entry>
+
+  <entry>
     <title>A Tumblr Post</title>
     <link rel="alternate" href="https://owen-af.tumblr.com/post/711272935892074496"></link>
     <link rel="self" href="https://owencompher.me/feed.xml#0002"></link>
