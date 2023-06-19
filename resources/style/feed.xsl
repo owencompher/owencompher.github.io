@@ -23,14 +23,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:value-of select="*[name()='title']"/>: </a>  
             <i><xsl:value-of select="*[name()='summary']"/></i> 
             <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
-            <div>
+            <div class="indent">
                 <xsl:copy-of select="*[name()='content']"/>
             </div>
           </div>
         </xsl:for-each>
+        <br/>
+        <a href="https://owencompher.me">homepage</a>
     </main>
     <script type="text/javascript">
-        for(el of document.getElementsByClassName("hider")) toggle(el, el.nextElementSibling, ' (show)', ' (hide)');
+        for(el of document.getElementsByClassName("hider")) if(window.location.hash.substr(1,4)!=el.parentElement.id) toggle(el, el.nextElementSibling, ' (show)', ' (hide)');
     </script>
 </body>
 </html>
