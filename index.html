@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Owen - Home</title>
     <link rel="shortcut icon" type="image/jpg" href="resources/image/1.png">
-    <link rel="stylesheet" href="resources/style/main.css" media="screen and (min-device-width: 481px)">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="resources/style/main.css">
     <link rel="stylesheet" href="resources/style/mobile.css" media="screen and (max-device-width: 480px)">
     <script type="text/javascript" src="resources/script/feed.js"></script>
     <script type="text/javascript" src="resources/script/hide.js"></script>
@@ -19,8 +20,16 @@
         </nav>
         <div>
             <span class="title">Owen Compher's Website</span>
+            <img class="navButton" src="resources/image/nav.png" style="float: right; height: 24px;" 
+                onclick="toggle(this, document.getElementById('mobileNAV'), '', '');">
             <!--a href="https" style="float: right">options</a-->
         </div>
+        <nav id="mobileNAV" style="display: none">
+            <a class="link" href="index.html">home,</a>
+            <a class="link" href="about.html">about,</a>
+            <a class="link" href="projects.html">projects,</a>
+            <a class="link" href="other.html">etc.</a>
+        </nav>
     </div>
     <main>
         <p>Hi, welcome to my website! This serves as a profile, portfolio, link-tree,
