@@ -1,9 +1,9 @@
 function toggle(button, content, show, hide) {
-    if (content.hasAttribute('hidden')) {
+    if (content.style.display == 'none') {
         button.innerHTML = hide;
-        content.removeAttribute('hidden');
+        content.style.display = 'initial';
     } else {
         button.innerHTML = show;
-        content.setAttribute('hidden', '');
+        content.style.display = 'none';
     }
 }
