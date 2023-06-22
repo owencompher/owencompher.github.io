@@ -13,6 +13,7 @@ body {
     width: 900px;
     border-bottom: 1px solid;
 }
+#mobileNAV { display: none; }
 .navButton { display: none; }
 nav { margin-bottom: 10px; }
 .title {
