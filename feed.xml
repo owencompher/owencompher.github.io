@@ -12,6 +12,19 @@
   </author>
   <id>http://owencompher.me/</id>
 
+<entry>
+    <title>Online Whiteboard</title>
+    <link rel="self" href="https://owencompher.me/feed.xml#0003"></link>
+    <id>tag:owencompher.me,2023:/feed.xml#0004</id>
+    <updated>2023-07-01T21:10:00-04:00</updated>
+    <summary>I made a little web app thing</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>I thought it would be cool to have some place to have a kind of notes.txt file- but on the internet. The idea is that I can easily access it from any device that has a browser and an internet connection. Instead of having a text file on my laptop, and the notes app on my iphone, and emails to myself, I just type into a webpage and click a button, and the content is immediately stored on my cloud sever.</p>
+      <p>The other property is that it is public. Even if I never find a good use for that fact it is still a pretty cool concept. It's also why I thought 'whiteboard' might be a good name for it; it's kinda like how people put little whiteboards on their dorm room doors for passing classmates to write things on. Right now it's password protected, but if you promise to not grief it the password is "whiteboard-unflexing-oriented-grouse!". I might eventually make a couple different versions, with different levels of privacy/security.</p>
+      <p>The tech is pretty simple: PHP to load the text file into a form textarea, and to overwrite the file when submitted with the correct password. I know there's probably some huge security issues, but I'm not too concerned; I don't plan on keeping anything sensitive anywhere near it.</p>
+    </div></content>
+  </entry>
+
   <entry>
     <title>On the Indie Web</title>
     <link rel="self" href="https://owencompher.me/feed.xml#0003"></link>
