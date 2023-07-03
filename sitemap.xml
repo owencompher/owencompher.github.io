@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
     <loc>https://owencompher.me/</loc>
-    <lastmod>2023-06-15</lastmod>
+    <lastmod>2023-07-03</lastmod>
 </url>
 <url>
     <loc>https://owencompher.me/about.html</loc>
@@ -26,6 +26,10 @@
     <lastmod>2023-06-22</lastmod>
 </url>
 <url>
+    <loc>https://owencompher.me/showcase.html</loc>
+    <lastmod>2023-07-03</lastmod>
+</url>
+<url>
     <loc>https://owencompher.me/feed.xml</loc>
     <lastmod>2023-06-18</lastmod>
 </url>
@@ -35,7 +39,7 @@
 </url>
 <url>
     <loc>https://owencompher.me/kiosk/about.html</loc>
-    <lastmod>2023-06-17</lastmod>
+    <lastmod>2023-07-03</lastmod>
 </url>
 <url>
     <loc>https://owencompher.me/kiosk/join.html</loc>
