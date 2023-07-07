@@ -3,41 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Owen - Other</title>
-    <link rel="shortcut icon" type="image/jpg" href="resources/image/1.png">
+    <link rel="shortcut icon" type="image/jpg" href="/resources/image/1.png">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="resources/style/main.css">
-    <link rel="stylesheet" href="resources/style/mobile.css" media="screen and (max-device-width: 480px)">
-    <script type="text/javascript" src="resources/script/feed.js"></script>
-    <script type="text/javascript" src="resources/script/hide.js"></script>
+    <link rel="stylesheet" href="/resources/style/main.css">
+    <link rel="stylesheet" href="/resources/style/mobile.css" media="screen and (max-device-width: 480px)">
+    <script type="text/javascript" src="/resources/script/feed.js"></script>
+    <script type="text/javascript" src="/resources/script/hide.js"></script>
 </head>
 <body>
     <div class="top">
         <nav>pages:
             <a class="link" href="index.html">home,</a>
-            <a class="link" href="about.html">about,</a>
-            <a class="link" href="projects.html">projects,</a>
-            <a class="link" href="other.html">etc.</a>
+            <a class="link" href="/about">about,</a>
+            <a class="link" href="/projects">projects,</a>
+            <a class="link" href="/other">etc.</a>
         </nav>
         <div>
             <span class="title">Other</span>
-            <img class="navButton" src="resources/image/nav.png" style="float: right; height: 24px;" 
+            <img class="navButton" src="/resources/image/nav.png" style="float: right; height: 24px;" 
                 onclick="toggle(this, document.getElementById('mobileNAV'), '', '');">
-            <span class="hideMobile" style="display: inline-block; width: 750px; float: right;">
-                <img id="frog" src="resources/image/frog/0.png" style="position: relative; left: 50%">
-            </span>
-            <script src="resources/script/frog.js"></script>
             <!--a href="https" style="float: right">options</a-->
         </div>
         <nav id="mobileNAV">
             <script type="text/javascript">document.getElementById('mobileNAV').style.display='none'</script>
             <a class="link" href="index.html">home,</a>
-            <a class="link" href="about.html">about,</a>
-            <a class="link" href="projects.html">projects,</a>
-            <a class="link" href="other.html">etc.</a>
+            <a class="link" href="/about">about,</a>
+            <a class="link" href="/projects">projects,</a>
+            <a class="link" href="/other">etc.</a>
         </nav>
     </div>
     <main>
-        <i><p class="splash content" id="splash">click for details</p></i><script src="resources/script/splash.js"></script>
+        <i><p class="splash content" id="splash">click for details</p></i><script src="/resources/script/splash.js"></script>
         <div id="status">
             latest entry from <a href="/feed.xml">my feed:</a><br>
             [<span id="status-date"></span>] <a id="status-title" target="_blank"></a>: <i id="status-summary"></i>
@@ -78,6 +74,11 @@
             <a href="https://bikobatanari.art" target="_blank"><img src="resources/image/button/bikobatanari.gif"></a>
             <!--a href="https://mucube.net/" target="_blank"><img src="resources/image/button/mucube-button.gif"></a-->
             <a href="https://districts.neocities.org/" target="_blank"><img src="resources/image/button/districtstext.png"></a>
+            <a href="https://owencompher.me" target="_blank">
+            <img src="resources/image/button/o-nc.png" 
+            onmouseover="this.src='resources/image/button/o-nc2.png'"
+            onmouseout="this.src='resources/image/button/o-nc.png'">
+            </a>    
             <a href="https://ake.neocities.org/" target="_blank"><img src="resources/image/button/ake.png"></a>
             <a href='https://itzzcode.github.io' target="_blank"><img src='resources/image/button/itzzme.png' alt='itzzbutton' /></a>
             <a href="https://jmibo.neocities.org/" target="_blank"><img src="resources/image/button/jimbo.png"></a>
@@ -125,17 +126,37 @@
         <span style="color: #d8828e">b</span><span style="color: #e8b382">u</span><span style="color: #ffff8f">c</span><span style="color: #78e098">k</span><span style="color: #849ad8">e</span><span style="color: #a776c1">t</span><span> </span><span style="color: #e8b382">w</span><span style="color: #ffff8f">e</span><span style="color: #78e098">b</span><span style="color: #849ad8">r</span><span style="color: #a776c1">i</span><span style="color: #d8828e">n</span><span style="color: #e8b382">g</span>
         </a><a href="https://webring.bucketfish.me/redirect.html?to=next&name=o2c" class="link">>-==></a><br>
         <br>
+        <!--img src="resources/image/button/o-nc.png">
+        <img src="resources/image/button/o-nc2.png">
+        <img src="resources/image/button/o-nc.png" 
+            onmouseover="this.src='resources/image/button/o-nc2.png'"
+            onmouseout="this.src='resources/image/button/o-nc.png'">
+        <br>
         <img src="resources/image/button/o2c.png">
-        <p style="margin-top: 0">button for linking back to my page <a onclick="copyButton()">[copy element]</a></p>
-        <script>function copyButton() {navigator.clipboard.writeText(
-            "<a href=\"https://owencompher.me\"><img src=\"https://owencompher.me/resources/image/button/o2c.png\"></a>"
-        )}</script>
+        <img src="resources/image/button/o2c2.png">
+        <img src="resources/image/button/o2c.png" 
+            onmouseover="this.src='resources/image/button/o2c2.png'"
+            onmouseout="this.src='resources/image/button/o2c.png'">
+        <br>
+        <img src="resources/image/button/o2c.gif">
+        <img src="resources/image/button/o2c2.gif">
+        <img src="resources/image/button/o2c.gif" 
+            onmouseover="this.src='resources/image/button/o2c2.gif'"
+            onmouseout="this.src='resources/image/button/o2c.gif'">
+        <br>
+        <img src="resources/image/button/o-nc2.gif">
+        <img src="resources/image/button/o-nc.gif">
+        <img src="resources/image/button/o-nc2.gif" 
+            onmouseover="this.src='resources/image/button/o-nc.gif'"
+            onmouseout="this.src='resources/image/button/o-nc2.gif'">
+        <br>
+        <img src="resources/image/button/o2c-old.png"-->
         <p>other buttons: </p>
-        <img src="resources/image/button/aseprite.png">
-        <img src="resources/image/button/by-nc-sa.png" height="31px">
+        <img src="/resources/image/button/aseprite.png">
+        <img src="/resources/image/button/by-nc-sa.png" height="31px">
         <img src="https://cyber.dabamos.de/88x31/drpepper.gif">
         <a href="http://web3.14159.annwfn.net/" target="_blank">
-            <img src="resources/image/button/web-pi.png"></a>   
+            <img src="/resources/image/button/web-pi.png"></a>   
         <br><br>
         <style>
             #blahaj { animation: spin 5s linear infinite; height: 1em; }
@@ -147,7 +168,7 @@
                 #blahaj { animation: none; }
             }
         </style>
-        <p><img id="blahaj" src="resources/image/blahaj.png" alt="blåhaj" />
+        <p><img id="blahaj" src="/resources/image/blahaj.png" alt="blåhaj" />
             <a class="link" href="https://berrymot.github.io" target="_blank">certified</a> Good Website by blåhaj</p>
         <br>
         <a href="https://citrons.xyz/a/memetic-apioform-page.html"><img src="https://citrons.xyz/a/static/apiopage.png"/></a>

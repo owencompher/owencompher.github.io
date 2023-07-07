@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Owen - Showcase</title>
-    <link rel="shortcut icon" type="image/jpg" href="resources/image/1.png">
+    <link rel="shortcut icon" type="image/jpg" href="/resources/image/1.png">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="resources/style/main.css">
-    <link rel="stylesheet" href="resources/style/mobile.css" media="screen and (max-device-width: 480px)">
-    <script type="text/javascript" src="https://o-nc.me/resources/script/feed.js"></script>
-    <script type="text/javascript" src="https://o-nc.me/resources/script/hide.js"></script>
+    <link rel="stylesheet" href="/resources/style/main.css">
+    <link rel="stylesheet" href="/resources/style/mobile.css" media="screen and (max-device-width: 480px)">
+    <script type="text/javascript" src="/resources/script/hide.js"></script>
+    <script type="text/javascript" src="/resources/script/feed.js"></script>
 </head>
 <body>
     <div class="top">
         <nav>pages:
             <a class="link" href="index.html">home,</a>
-            <a class="link" href="about.html">about,</a>
-            <a class="link" href="projects.html">projects,</a>
-            <a class="link" href="other.html">etc.</a>
+            <a class="link" href="/about">about,</a>
+            <a class="link" href="/projects">projects,</a>
+            <a class="link" href="/other">etc.</a>
         </nav>
         <div>
             <span class="title">Website Showcase</span>
-            <img class="navButton" src="resources/image/nav.png" style="float: right; height: 24px;" 
+            <img class="navButton" src="/resources/image/nav.png" style="float: right; height: 24px;" 
                 onclick="toggle(this, document.getElementById('mobileNAV'), '', '');">
             <!--a href="https" style="float: right">options</a-->
         </div>
         <nav id="mobileNAV">
             <script type="text/javascript">document.getElementById('mobileNAV').style.display='none'</script>
             <a class="link" href="index.html">home,</a>
-            <a class="link" href="about.html">about,</a>
-            <a class="link" href="projects.html">projects,</a>
-            <a class="link" href="other.html">etc.</a>
+            <a class="link" href="/about">about,</a>
+            <a class="link" href="/projects">projects,</a>
+            <a class="link" href="/other">etc.</a>
         </nav>
     </div>
     <main>
-        <p>I have something similar on my <a href="projects.html">projects page</a>, but I'd thought it would be good to have a place to go into more technical detail about some things on this site.</p>
+        <p>I have something similar on my <a href="/pages/projects.html">projects page</a>, but I'd thought it would be good to have a place to go into more technical detail about some things on this site.</p>
         <p>My domain, owencompher.me (and o-nc.me), points to my cloud server, which is hosted by <a href="https://www.vultr.com/">Vultr</a>. Among other things, it serves my (this) website, which is also <a href="https://github.com/owencompher/owencompher.github.io">on GitHub</a>.</p>
         <p>Some cool things I keep on my website:
         <br>
-        - <a href="convert.html">converters</a>
+        - <a href="/pages/convert.html">converters</a>
         <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
         <span>These are a collection of javascript applets for doing some number conversions.</span>
         <br>
@@ -45,7 +45,7 @@
         <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
         <span>This is a clone of <a href="https://kiosk.nightfall.city/">Neon Kiosk by m15o</a>. It's essentially a Go app which aggregates posts from other blog-style websites. I partially reversed engineered it to make a few tweaks, and set up a cron job to update it automatically.</span>
         <br>
-        - <a href="feed.xml#0001">feed</a>
+        - <a href="/feed.xml#0001">feed</a>
         <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
         <span>I started an atom feed for general updates. I learned to use XML styling to make it into a nice page, and an ID system allows me to link to specific posts. Some Javascript collapses every post except the one specified in the link. I also wrote a script to get my most recent post, for displaying on other parts of the website, like this:
         <br><br>
