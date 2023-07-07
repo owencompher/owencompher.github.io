@@ -39,7 +39,7 @@
         <br>
         - <a href="convert.html">converters</a>
         <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
-        <span>These are a collection of kinda complicated javascript applets for doing some number conversions.</span>
+        <span>These are a collection of javascript applets for doing some number conversions.</span>
         <br>
         - <a href="kiosk">kiosk</a>
         <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
@@ -47,12 +47,12 @@
         <br>
         - <a href="feed.xml#0001">feed</a>
         <a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
-        <span>I started an atom feed for general updates. I learned to use XML styling to make it into a nice page, and an ID system allows me to almost permalink specific posts. Some Javascript collapses every post except the one specified in the link. I also wrote a bit of JS to get my most recent post, for displaying on other parts of the website, like this:
-            <div id="status" class="indent">
+        <span>I started an atom feed for general updates. I learned to use XML styling to make it into a nice page, and an ID system allows me to link to specific posts. Some Javascript collapses every post except the one specified in the link. I also wrote a script to get my most recent post, for displaying on other parts of the website, like this:
+        <br><br>
                 latest entry from <a href="/feed.xml">my feed:</a><br>
                 [<span id="status-date"></span>] <a id="status-title" target="_blank"></a>: <i id="status-summary"></i>
-            </div>
             <script type="text/javascript">getRecent(buildEntryElement);</script>
+            <br>
         </span>
         <br>
         - <a href="whiteboard">whiteboard</a>
@@ -60,11 +60,12 @@
         <span>I used PHP and forms to make a text file publicly viewable, with password-protected editing. Its mostly for personal use, but I'm sure there are plenty of other things I could do with it or a similar idea.</span>
         <br>
         - other javascript<a class="hider" onclick="toggle(this, this.nextElementSibling, ' (show)', ' (hide)')"> (hide)</a>
-        <span>Randomly-selected spash text, and a little frog from the DSi's Flipnote Studio, on the <a href="other.html">other page</a>; a simple script to hide/show content, used in many places (including this page).</span>
-        <br><br><br><br><br><br><br>
+        <span>Randomly-selected spash text, and a little frog from the DSi's Flipnote Studio, both on the <a href="other.html">other page</a>; a simple script to hide/show content, used in many places (including this page).</span>
+        <br>
+        <p>In addition to my website, I use the sever for some other personal things. Vultr's lowest plan still has 25GB, so it works well for file storage. I use the <a href="https://miniflux.app/">Miniflux</a> feed reader for my own entertainment, and <a href="https://davical.org/">DAViCal</a> for my calendar, instead of Outlook. The installation wasn't too hard, I just had to install the software and link it to postresql databases.
     </main>
     <script type="text/javascript">
-        for(el of document.getElementsByClassName("hider")) if(window.location.hash.substr(1,4)!=el.parentElement.id) toggle(el, el.nextElementSibling, ' (show)', ' (hide)');
+        for(el of document.getElementsByClassName("hider")) /*if(window.location.hash.substr(1,4)!=el.parentElement.id)*/ toggle(el, el.nextElementSibling, ' (show)', ' (hide)');
     </script>
 </body>
 </html>
