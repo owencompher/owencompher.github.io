@@ -16,7 +16,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </head>
 <body>
     <main style="margin-top: 80px">
-        <xsl:value-of select="*/*[name()='title']"/> | <i><xsl:value-of select="*/*[name()='author']"/></i><br/>
+        <xsl:value-of select="*/*[name()='title']"/> | <i><xsl:value-of select="*/*[name()='author']"/></i><br/><br/>
         <xsl:for-each select="*/*[name()='entry']">
           <div><xsl:attribute name="id"><xsl:value-of select="substring-after(*[name()='id'], 'feed.xml#')"/></xsl:attribute>
             [<xsl:value-of select="substring(*[name()='updated'], 0, 11)"/>] 

@@ -1,14 +1,31 @@
+:root {
+    --fg: #f0f0eb;
+    --bg: #333236;
+    --cl: #a776c1;
+    --hl: #ffff8f;
+}
+
+@media (prefers-color-scheme: light) { :root {
+    --fg: #333236;
+    --bg: #f0f0eb;
+    --cl: #8049aa;
+    --hl: #a776c1;
+}}
+
 body {
     font-family: Consolas, monospace;
     font-size: 18px;
-    background-color: #333236;
-    color: #f0f0eb;
+    background-color: var(--bg);
+    color: var(--fg);
     width: 1000px;
     margin: auto;
 }
 .top {
-    position: fixed; top: 0; padding-top: 80px;
-    background-color: #333236;
+    position: sticky; 
+    top: 0;
+    padding-top: 10px; 
+    margin-top: 80px;
+    background-color: var(--bg);
     height: 80px;
     width: 900px;
     border-bottom: 1px solid;
@@ -22,12 +39,16 @@ nav { margin-bottom: 10px; }
 }
 main {
     width: 850px;
-    margin-top: 180px;
+    margin-top: 0;
     padding-left: 5px;
 }
 .indent { padding-left: 10px; }
 a {
     text-decoration: none;
-    color: #849ad8;
+    color: var(--cl);
 }
-a:hover { color: #ffff8f; }
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px; 
+    color: var(--hl); 
+}
