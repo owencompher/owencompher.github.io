@@ -12,7 +12,20 @@
   </author>
   <id>http://owencompher.me/</id>
 
-<entry>
+  <entry>
+    <title>Unnamed origami app</title>
+    <link rel="self" href="https://owencompher.me/feed.xml#0005"></link>
+    <id>tag:owencompher.me,2023:/feed.xml#0005</id>
+    <updated>2023-09-20T22:22:00-04:00</updated>
+    <summary>I learn web frameworks and make a thing</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Recently I've gotten back into origami and have rediscovered how annoying it is to find diagrams online. I'm not a huge fan of video tutorials, and other than Jo Nakashima and a few others, YouTube is full of low quality or simple and unoriginal tutorials. <a href="https://www.giladorigami.com">Gilad's Origami Page</a> has a great database of designs and the books they are found in, but in order to access the diagrams I have to hope there is pdf of the book floating around. This can take some time and is of dubious legality. I felt it would be nice if I could pay a few bucks for easy access to online diagrams, instead of relying on piracy or paying $20 and waiting a week for a book full mostly of models I'm not interested in.</p>
+      <p>So thats how I got the idea for my most recent project/'learning experience': a website for finding and sharing (or possibly buying and selling) origami diagrams, similar to YouTube or iTunes or Spotify. I knew it would probably be one of my larger projects so I started by learning Docker, then starting with the Laravel framework. It was annoying to set up so I switched to Django and all the configuartion still felt unnescessary so I stopped using Docker and switched to Flask. I liked having more control of the way the project is organized.</p>
+      <p>Anyways I'm pretty proud of what I have and put the beta of 'origami app' up at <a href="https://origami.owencompher.me">https://origami.owencompher.me</a> until I come up with a name and get the domain. I also still have a fair amount of things I want to do with the project, including actually finding content I can legally put on the site. If anyone actually reads this and is interested (first of all, hi!) you can make an account on the website and check out the repository at <a href="https://github.com/owencompher/origami-app">https://github.com/owencompher/origami-app</a>.</p>
+    </div></content>
+  </entry>
+
+  <entry>
     <title>Online Whiteboard</title>
     <link rel="self" href="https://owencompher.me/feed.xml#0004"></link>
     <id>tag:owencompher.me,2023:/feed.xml#0004</id>
