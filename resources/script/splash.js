@@ -67,7 +67,10 @@ const splashes = [
     "Go Noles!",
     "Quoth the Raven, \"Nevermore.\"",
     "time complexity of O(n)",
-    "page loaded in 12.73 parsecs"
+    "page loaded in 12.73 parsecs",
+    "Sapere Aude",
+    "I love you",
+    "There's only one thing I hate more than lying - skim milk, which is water that's lying about being milk"
 ]
 
 document.getElementById('splash').innerHTML = splashes[Math.floor(Math.random()*splashes.length)]
